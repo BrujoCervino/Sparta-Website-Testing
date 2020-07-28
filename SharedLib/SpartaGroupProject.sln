@@ -5,6 +5,9 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib", "SharedLib\SharedLib.csproj", "{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginPageObject", "LoginPageObject\LoginPageObject.csproj", "{7DA4A21A-A772-437E-8099-67CC5D743D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginTests", "LoginTests\LoginTests.csproj", "{7E16474C-96BE-4C0A-B2A1-6CDF674ABA14}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel_ResultsPage", "PageObjectModel_Results\PageObjectModel_ResultsPage.csproj", "{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests_Results", "ClassLibrary1\Tests_Results.csproj", "{A91D756A-7CA7-4258-B201-D730B5C47660}"
@@ -21,6 +24,14 @@ Global
 		{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA4A21A-A772-437E-8099-67CC5D743D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA4A21A-A772-437E-8099-67CC5D743D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA4A21A-A772-437E-8099-67CC5D743D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA4A21A-A772-437E-8099-67CC5D743D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E16474C-96BE-4C0A-B2A1-6CDF674ABA14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E16474C-96BE-4C0A-B2A1-6CDF674ABA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E16474C-96BE-4C0A-B2A1-6CDF674ABA14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E16474C-96BE-4C0A-B2A1-6CDF674ABA14}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
