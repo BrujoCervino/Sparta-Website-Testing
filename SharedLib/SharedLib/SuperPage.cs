@@ -4,9 +4,11 @@ namespace SharedLib
 {
     public class SuperPage : IPage
     {
+        private IWebElement spartaLogo => _seleniumDriver.FindElement(By.Id(".logoHeader"));
+
         protected IWebDriver _seleniumDriver;
         protected string _url;
-
+        
         public SuperPage(IWebDriver seleniumDriver)
         {
             _seleniumDriver = seleniumDriver;
@@ -21,5 +23,7 @@ namespace SharedLib
         {
             _seleniumDriver.Manage().Window.Maximize();
         }
+
+        public void ClickLogo() => spartaLogo.Click();
     }
 }
