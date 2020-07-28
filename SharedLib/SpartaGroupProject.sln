@@ -9,9 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginPageObject", "LoginPag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginTests", "LoginTests\LoginTests.csproj", "{7E16474C-96BE-4C0A-B2A1-6CDF674ABA14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel_ResultsPage", "PageObjectModel_Results\PageObjectModel_ResultsPage.csproj", "{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsPageObject", "PageObjectModel_Results\ResultsPageObject.csproj", "{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsTests", "ResultsTests\ResultsTests.csproj", "{A91D756A-7CA7-4258-B201-D730B5C47660}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentPageObject", "AssessmentPageObject\AssessmentPageObject.csproj", "{F23A6ADB-1271-4C14-88E8-9CD66E1DD636}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentTests", "AssessmentTests\AssessmentTests.csproj", "{B1D5CD24-32E3-4FB1-B61B-8682C6AA2E77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,14 @@ Global
 		{A91D756A-7CA7-4258-B201-D730B5C47660}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A91D756A-7CA7-4258-B201-D730B5C47660}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A91D756A-7CA7-4258-B201-D730B5C47660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F23A6ADB-1271-4C14-88E8-9CD66E1DD636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F23A6ADB-1271-4C14-88E8-9CD66E1DD636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F23A6ADB-1271-4C14-88E8-9CD66E1DD636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F23A6ADB-1271-4C14-88E8-9CD66E1DD636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D5CD24-32E3-4FB1-B61B-8682C6AA2E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D5CD24-32E3-4FB1-B61B-8682C6AA2E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D5CD24-32E3-4FB1-B61B-8682C6AA2E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D5CD24-32E3-4FB1-B61B-8682C6AA2E77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
