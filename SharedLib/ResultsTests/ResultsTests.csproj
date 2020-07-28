@@ -60,8 +60,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AssessmentPageObject\AssessmentPageObject.csproj">
+      <Project>{f23a6adb-1271-4c14-88e8-9cd66e1dd636}</Project>
+      <Name>AssessmentPageObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PageObjectModel_Results\ResultsPageObject.csproj">
-      <Project>{f27e2d55-627c-4898-b61e-3a73ecab0d8e}</Project>
+      <Project>{EC093092-BFC4-4400-AB64-6A3F3A132327}</Project>
       <Name>ResultsPageObject</Name>
     </ProjectReference>
     <ProjectReference Include="..\SharedLib\SharedLib.csproj">
