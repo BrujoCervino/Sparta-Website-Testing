@@ -19,8 +19,8 @@ namespace WebsiteManager
 
         internal void SleepDriver(int sleepTime) => Thread.Sleep(TimeSpan.FromSeconds(sleepTime));
 
-        internal void Close() => seleniumDriver.Dispose();
+        public void Close() => seleniumDriver.Dispose();
 
-        internal string GetUrl() => seleniumDriver.Url;
+        public string GetUrl() => seleniumDriver.Url;
     }
 }

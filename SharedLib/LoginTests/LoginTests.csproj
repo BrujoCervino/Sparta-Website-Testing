@@ -47,11 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="LoginNavigationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoginPageObject\LoginPageObject.csproj">
+      <Project>{7DA4A21A-A772-437E-8099-67CC5D743D32}</Project>
+      <Name>LoginPageObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedLib\SharedLib.csproj">
+      <Project>{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}</Project>
+      <Name>SharedLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebsiteManager\WebsiteManager.csproj">
+      <Project>{A1F1CBCC-B3C2-49FD-BC0D-38FEE7663081}</Project>
+      <Name>WebsiteManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
