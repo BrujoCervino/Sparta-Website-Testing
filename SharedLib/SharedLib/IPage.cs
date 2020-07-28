@@ -4,5 +4,6 @@
     {
         void Visit();
         void MaximisePage();
+        string GetCurrentUrl();
     }
 }

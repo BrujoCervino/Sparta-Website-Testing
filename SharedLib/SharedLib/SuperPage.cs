@@ -24,6 +24,7 @@ namespace SharedLib
             _seleniumDriver.Manage().Window.Maximize();
         }
 
+        public string GetCurrentUrl() => _seleniumDriver.Url;
         public void ClickLogo() => spartaLogo.Click();
     }
 }
