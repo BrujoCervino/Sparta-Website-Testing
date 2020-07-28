@@ -39,8 +39,8 @@ namespace SharedLib
 
         private void SetFireFoxDriver()
         {
-            FirefoxOptions fo = new FirefoxOptions { BrowserExecutableLocation = @"D:\Programmes\Mozilla Firefox" };
-            Driver = new FirefoxDriver(fo);
+            FirefoxOptions fo = new FirefoxOptions { BrowserExecutableLocation = BrowserConfigReader.FirefoxLocation };
+            Driver = string.IsNullOrWhiteSpace(fo.BrowserExecutableLocation) ? new FirefoxDriver() : new FirefoxDriver(fo);          
         }
 
         private void SetChromeDriver()

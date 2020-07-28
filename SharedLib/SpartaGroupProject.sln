@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginTests", "LoginTests\Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel_ResultsPage", "PageObjectModel_Results\PageObjectModel_ResultsPage.csproj", "{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests_Results", "ClassLibrary1\Tests_Results.csproj", "{A91D756A-7CA7-4258-B201-D730B5C47660}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsPageObject", "PageObjectModel_Results\ResultsPageObject.csproj", "{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsTests", "ResultsTests\ResultsTests.csproj", "{A91D756A-7CA7-4258-B201-D730B5C47660}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentPageObject", "AssessmentPageObject\AssessmentPageObject.csproj", "{F23A6ADB-1271-4C14-88E8-9CD66E1DD636}"
 EndProject
