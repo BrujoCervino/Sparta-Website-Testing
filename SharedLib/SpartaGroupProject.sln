@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib", "SharedLib\SharedLib.csproj", "{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel_ResultsPage", "PageObjectModel_Results\PageObjectModel_ResultsPage.csproj", "{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests_Results", "ClassLibrary1\Tests_Results.csproj", "{A91D756A-7CA7-4258-B201-D730B5C47660}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel_Assessment", "PageObjectModel_Assessment\PageObjectModel_Assessment.csproj", "{C42C1CDA-11EC-4A96-8B16-199119331DAF}"
 EndProject
 Global
@@ -17,6 +21,14 @@ Global
 		{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34DC2123-01CB-4D6A-9F8A-E30EC00E8DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27E2D55-627C-4898-B61E-3A73ECAB0D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A91D756A-7CA7-4258-B201-D730B5C47660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91D756A-7CA7-4258-B201-D730B5C47660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91D756A-7CA7-4258-B201-D730B5C47660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91D756A-7CA7-4258-B201-D730B5C47660}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C42C1CDA-11EC-4A96-8B16-199119331DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C42C1CDA-11EC-4A96-8B16-199119331DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C42C1CDA-11EC-4A96-8B16-199119331DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -129,6 +129,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SeleniumDriverConfig.cs" />
     <Compile Include="IPage.cs" />
     <Compile Include="SuperPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
