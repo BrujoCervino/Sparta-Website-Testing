@@ -5,7 +5,7 @@ namespace ClassLibrary1
     public class FirstTest
     {
         [Test]
-        public void Janine()
+        public void FirstTest_Passes() 
         {
             Assert.Pass();
         }
