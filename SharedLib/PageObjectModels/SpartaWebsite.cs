@@ -10,6 +10,7 @@ namespace PageObjectModels
     // This should maybe inherit from the page class.
     public class SpartaWebsite
     {
+        public readonly AssessmentPage assessmentPage;
         public readonly ResultsPage resultsPage;
         public readonly LoginPage loginPage;
         public readonly DispatchesPage dispatchesPage;
@@ -21,6 +22,7 @@ namespace PageObjectModels
             resultsPage = new ResultsPage(SeleniumDriver);
             loginPage = new LoginPage(SeleniumDriver);
             dispatchesPage = new DispatchesPage(SeleniumDriver);
+            assessmentPage = new AssessmentPage(SeleniumDriver);
         }
 
         internal void SleepDriver(int sleepTime) => Thread.Sleep(TimeSpan.FromSeconds(sleepTime));
