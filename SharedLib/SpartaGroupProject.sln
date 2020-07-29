@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsTests", "ResultsTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentTests", "AssessmentTests\AssessmentTests.csproj", "{B1D5CD24-32E3-4FB1-B61B-8682C6AA2E77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModels", "PageObjectModels\PageObjectModels.csproj", "{123AB932-55F0-4DC1-9753-50105F8E25BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageObjectModels", "PageObjectModels\PageObjectModels.csproj", "{123AB932-55F0-4DC1-9753-50105F8E25BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispatchesTests", "DispatchesTests\DispatchesTests.csproj", "{8102497D-5EF9-4F0A-8D1C-991AC9FA5325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{123AB932-55F0-4DC1-9753-50105F8E25BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123AB932-55F0-4DC1-9753-50105F8E25BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{123AB932-55F0-4DC1-9753-50105F8E25BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8102497D-5EF9-4F0A-8D1C-991AC9FA5325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8102497D-5EF9-4F0A-8D1C-991AC9FA5325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8102497D-5EF9-4F0A-8D1C-991AC9FA5325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8102497D-5EF9-4F0A-8D1C-991AC9FA5325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
