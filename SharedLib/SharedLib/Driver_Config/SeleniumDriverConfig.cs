@@ -38,9 +38,11 @@ namespace SharedLib
         }
 
         private void SetFireFoxDriver()
-        {
-            FirefoxOptions fo = new FirefoxOptions { BrowserExecutableLocation = @"D:\Programmes\Mozilla Firefox" };
-            Driver = new FirefoxDriver(fo);
+        {           
+            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"C:\Program Files\Mozilla Firefox", "geckodriver.exe");
+            service.Port = 64444;
+            service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+            Driver = new FirefoxDriver(service);
         }
 
         private void SetChromeDriver()

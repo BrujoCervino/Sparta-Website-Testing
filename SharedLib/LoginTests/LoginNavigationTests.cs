@@ -16,7 +16,7 @@ namespace LoginTests
         [SetUp]
         public void Setup()
         {
-            _website = new Website("chrome", _sleepTime, _sleepTime);
+            _website = new Website("firefox", _sleepTime, _sleepTime);
         }
 
         [Test]
