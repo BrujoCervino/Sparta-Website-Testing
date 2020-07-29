@@ -12,6 +12,7 @@ namespace PageObjectModels
     {
         public readonly ResultsPage resultsPage;
         public readonly LoginPage loginPage;
+        public readonly DispatchesPage dispatchesPage;
         public readonly IWebDriver SeleniumDriver;
 
         public SpartaWebsite(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5)
@@ -19,6 +20,7 @@ namespace PageObjectModels
             SeleniumDriver = CreateDriver(driverName, pageLoadInSeconds, implicitWaitInSeconds);
             resultsPage = new ResultsPage(SeleniumDriver);
             loginPage = new LoginPage(SeleniumDriver);
+            dispatchesPage = new DispatchesPage(SeleniumDriver);
         }
 
         internal void SleepDriver(int sleepTime) => Thread.Sleep(TimeSpan.FromSeconds(sleepTime));
