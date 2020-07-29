@@ -1,0 +1,17 @@
+{
+  // Should the final slash be removed from baseUrl?
+  "baseUrl": "https://uat.spartaglobal.academy/",
+  "pages": {
+    // You'll have to add your own slashes: they should not be hard-coded
+    "dispatches": "dispatches",
+    "polls": "polls",
+    "results": "results"
+  },
+  "loginDetails": {
+    "username": "admin",
+    "password": "!L0nd0n2020"
+  },
+  "browserLocations": {
+    "firefox": "C:\\Users\\Test\\.nuget\\packages\\selenium.firefox.webdriver\\0.26.0\\driver"
+  }
+}

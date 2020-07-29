@@ -144,6 +144,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -157,16 +158,16 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
     <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props'))" />
-    <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets'))" />
     <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets'))" />
     <Error Condition="!Exists('..\packages\SpecFlow.3.3.57\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.3.3.57\build\SpecFlow.targets'))" />
     <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.3.57\build\SpecFlow.Tools.MsBuild.Generation.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.3.3.57\build\SpecFlow.Tools.MsBuild.Generation.props'))" />
     <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.3.57\build\SpecFlow.Tools.MsBuild.Generation.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.3.3.57\build\SpecFlow.Tools.MsBuild.Generation.targets'))" />
     <Error Condition="!Exists('..\packages\SpecFlow.NUnit.3.3.57\build\SpecFlow.NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.NUnit.3.3.57\build\SpecFlow.NUnit.props'))" />
     <Error Condition="!Exists('..\packages\SpecFlow.NUnit.3.3.57\build\SpecFlow.NUnit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.NUnit.3.3.57\build\SpecFlow.NUnit.targets'))" />
   </Target>
-  <Import Project="..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" />
   <Import Project="..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.83.0.0\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" />
   <Import Project="..\packages\SpecFlow.3.3.57\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.3.3.57\build\SpecFlow.targets')" />
   <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.3.3.57\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.3.3.57\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
   <Import Project="..\packages\SpecFlow.NUnit.3.3.57\build\SpecFlow.NUnit.targets" Condition="Exists('..\packages\SpecFlow.NUnit.3.3.57\build\SpecFlow.NUnit.targets')" />
