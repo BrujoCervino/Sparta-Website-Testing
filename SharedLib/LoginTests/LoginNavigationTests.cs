@@ -1,22 +1,17 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebsiteManager;
+using PageObjectModels;
 
 namespace LoginTests
 {
     public class LoginNavigationTests
     {
-        private Website _website;
+        private SpartaWebsite  _website;
         private const int _sleepTime = 5;
 
         [SetUp]
         public void Setup()
         {
-            _website = new Website("firefox", _sleepTime, _sleepTime);
+            _website = new SpartaWebsite("firefox", _sleepTime, _sleepTime);
         }
 
         [Test]

@@ -1,14 +1,10 @@
 ﻿using OpenQA.Selenium;
-using SharedLib;
 using OpenQA.Selenium.Support.UI;
 
-
-
-namespace AssessmentPageObject
+namespace PageObjectModels.POM
 {
     public class AssessmentPage : SuperPage
     {
-
         private SelectElement asessmentDropDown => new SelectElement(_seleniumDriver.FindElement(By.Id("assessment")));
         private IWebElement candidateName => _seleniumDriver.FindElement(By.Id("candidate_name"));
         private IWebElement candidateEmail => _seleniumDriver.FindElement(By.Id("candidate_email"));
@@ -19,6 +15,7 @@ namespace AssessmentPageObject
         private IWebElement results => _seleniumDriver.FindElement(By.CssSelector("[href *='/results']"));
         private IWebElement polls => _seleniumDriver.FindElement(By.CssSelector("[href *='/polls']"));
         private IWebElement logout => _seleniumDriver.FindElement(By.CssSelector("[href *='/logout']"));
+       
         public AssessmentPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
             _url = "https://uat.spartaglobal.academy/";

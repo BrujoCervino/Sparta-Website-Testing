@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using SharedLib;
+using PageObjectModels;
 
 namespace ResultsPageObject
 {

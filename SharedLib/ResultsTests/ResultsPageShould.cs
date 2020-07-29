@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using ResultsPageObject;
-using SharedLib;
+using PageObjectModels;
 
 namespace ResultsTests
 {

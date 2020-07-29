@@ -60,17 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AssessmentPageObject\AssessmentPageObject.csproj">
-      <Project>{f23a6adb-1271-4c14-88e8-9cd66e1dd636}</Project>
-      <Name>AssessmentPageObject</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PageObjectModel_Results\ResultsPageObject.csproj">
-      <Project>{EC093092-BFC4-4400-AB64-6A3F3A132327}</Project>
-      <Name>ResultsPageObject</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SharedLib\SharedLib.csproj">
-      <Project>{34dc2123-01cb-4d6a-9f8a-e30ec00e8df3}</Project>
-      <Name>SharedLib</Name>
+    <ProjectReference Include="..\PageObjectModels\PageObjectModels.csproj">
+      <Project>{123AB932-55F0-4DC1-9753-50105F8E25BE}</Project>
+      <Name>PageObjectModels</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

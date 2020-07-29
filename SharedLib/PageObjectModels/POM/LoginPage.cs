@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
-using SharedLib;
 
-namespace LoginPageObject
+namespace PageObjectModels.POM
 {
     public class LoginPage : SuperPage
     {
