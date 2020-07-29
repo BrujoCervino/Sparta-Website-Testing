@@ -3,7 +3,7 @@ using PageObjectModels;
 
 namespace AssessmentTests
 {
-    public class Class1
+    public class AssessmentNavigationTests
     {
         private SpartaWebsite _website;
         private const int _sleepTime = 5;
@@ -11,7 +11,7 @@ namespace AssessmentTests
         [SetUp]
         public void Setup()
         {
-            _website = new SpartaWebsite("chrome", _sleepTime, _sleepTime);
+            _website = new SpartaWebsite("chrome", _sleepTime, _sleepTime);           
         }
 
         [Test]
