@@ -12,7 +12,7 @@ namespace ResultsPageObject
 
         public ResultsPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
-            _url = $"{PagesConfigReader.BaseUrl}{PagesConfigReader.ResultsPage}";
+            _url = PagesConfigReader.ResultsUrl;
         }
     }
 }

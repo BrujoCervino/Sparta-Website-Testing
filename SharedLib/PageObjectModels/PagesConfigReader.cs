@@ -2,14 +2,14 @@
 {
     public class PagesConfigReader : ConfigReader
     {
-        public static readonly string BaseUrl = configObj.BaseUrl;
+        public static string BaseUrl = GetRoot().BaseUrl;
 
-        public static readonly string DispatchesPage = configObj.pages.Dispatches;
-        public static readonly string PollsPage = configObj.pages.Polls;
-        public static readonly string ResultsPage = configObj.pages.Results;
+        public static string DispatchesPage = GetRoot().pages.Dispatches;
+        public static string PollsPage = GetRoot().pages.Polls;
+        public static string ResultsPage = GetRoot().pages.Results;
 
-        public static readonly string DispatchesUrl = BaseUrl + DispatchesPage;
-        public static readonly string PollsUrl = BaseUrl + PollsPage;
-        public static readonly string ResultsUrl = BaseUrl + ResultsPage; 
+        public static string DispatchesUrl = BaseUrl + DispatchesPage;
+        public static string PollsUrl = BaseUrl + PollsPage;
+        public static string ResultsUrl = BaseUrl + ResultsPage;
     }
 }
