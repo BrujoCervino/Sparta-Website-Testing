@@ -45,7 +45,8 @@ namespace PageObjectModels.Driver_Config
 
         private void SetChromeDriver()
         {
-            Driver = new ChromeDriver();
+            string chromeDriverLocation = BrowserConfigReader.ChromeLocation;
+            Driver = string.IsNullOrWhiteSpace(chromeDriverLocation) ? new ChromeDriver() : new ChromeDriver(chromeDriverLocation);
         }
     }
 }
