@@ -9,7 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsTests", "ResultsTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentTests", "AssessmentTests\AssessmentTests.csproj", "{B1D5CD24-32E3-4FB1-B61B-8682C6AA2E77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModels", "PageObjectModels\PageObjectModels.csproj", "{123AB932-55F0-4DC1-9753-50105F8E25BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageObjectModels", "PageObjectModels\PageObjectModels.csproj", "{123AB932-55F0-4DC1-9753-50105F8E25BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Files", "Project Files", "{01E5B7A8-D793-4C10-B3CB-AF81576BB9EB}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
