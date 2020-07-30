@@ -3,7 +3,7 @@ using PageObjectModels;
 
 namespace DispatchesTests
 {
-    public class GetTableValuesTest
+    public class GetTableValuesTests
     {
         private SpartaWebsite _website;
         private const int _sleepTime = 5;
