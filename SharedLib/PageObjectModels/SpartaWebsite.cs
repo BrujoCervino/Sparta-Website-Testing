@@ -9,6 +9,7 @@ namespace PageObjectModels
 {
     public class SpartaWebsite
     {
+        public readonly AssessmentPage assessmentPage;
         public readonly ResultsPage resultsPage;
         public readonly LoginPage loginPage;
         public readonly DispatchesPage dispatchesPage;
@@ -17,9 +18,11 @@ namespace PageObjectModels
         public SpartaWebsite(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5)
         {
             SeleniumDriver = CreateDriver(driverName, pageLoadInSeconds, implicitWaitInSeconds);
+            assessmentPage = new AssessmentPage(SeleniumDriver);
             resultsPage = new ResultsPage(SeleniumDriver);
             loginPage = new LoginPage(SeleniumDriver);
             dispatchesPage = new DispatchesPage(SeleniumDriver);
+            
         }
 
         internal void SleepDriver(int sleepTime) => Thread.Sleep(TimeSpan.FromSeconds(sleepTime));

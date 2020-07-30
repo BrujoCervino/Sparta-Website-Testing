@@ -48,7 +48,7 @@ namespace PageObjectModels.POM
 
         public void SelectAssessment(string cource)
         {
-            asessmentDropDown.SelectByText("cource");
+            asessmentDropDown.SelectByText(cource);
         }
 
         public void GotoDispatch()

@@ -43,9 +43,11 @@ namespace PageObjectModels.Driver_Config
             Driver = string.IsNullOrWhiteSpace(fo.BrowserExecutableLocation) ? new FirefoxDriver() : new FirefoxDriver(fo);          
         }
 
+        //Has to be the selienium driver location not your browers
         private void SetChromeDriver()
         {
-            Driver = new ChromeDriver();
+            string chromeDriverLocation = BrowserConfigReader.ChromeLocation;
+            Driver = string.IsNullOrWhiteSpace(chromeDriverLocation) ? new ChromeDriver() : new ChromeDriver(chromeDriverLocation);
         }
     }
 }
