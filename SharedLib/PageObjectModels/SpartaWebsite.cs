@@ -7,7 +7,6 @@ using static PageObjectModels.Driver_Config.SeleniumDriverFactory;
 
 namespace PageObjectModels
 {
-    // This should maybe inherit from the page class.
     public class SpartaWebsite
     {
         public readonly ResultsPage resultsPage;
