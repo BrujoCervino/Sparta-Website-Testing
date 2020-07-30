@@ -25,5 +25,6 @@
     public class Browserlocations
     {
         public string Firefox { get; set; }
+        public string Chrome { get; set; }
     }
 }
