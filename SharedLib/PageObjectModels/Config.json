@@ -12,7 +12,7 @@
     "password": "!L0nd0n2020"
   },
   "browserLocations": {
-    "firefox": "C:\\Users\\Test\\.nuget\\packages\\selenium.firefox.webdriver\\0.26.0\\driver",
+    "firefox": "C:\\Program Files\\Mozilla Firefox",
     "chrome": "C:\\Users\\Test\\.nuget\\packages\\selenium.chrome.webdriver\\83.0.0\\driver"
   }
 }
