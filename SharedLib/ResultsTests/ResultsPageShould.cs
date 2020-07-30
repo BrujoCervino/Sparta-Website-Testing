@@ -19,7 +19,7 @@ namespace ResultsTests
         public void CanAccessResultsPage(in string driverName) 
         {
             // Arrange, act
-            SpartaWebsite spartaWebsite = new SpartaWebsite(driverName);
+            spartaWebsite = new SpartaWebsite(driverName);
             spartaWebsite.resultsPage.Visit();
             spartaWebsite.resultsPage.UsernameBox.SendKeys(LoginConfigReader.Username);
             spartaWebsite.resultsPage.PasswordBox.SendKeys(LoginConfigReader.Password);
