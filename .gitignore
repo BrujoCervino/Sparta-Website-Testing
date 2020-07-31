@@ -348,6 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-/SharedLib/PageObjectModels/Config.json
-SharedLib/SharedLib/Config.json
-SharedLib/PageObjModels/Config.json
+
+# Config.json
+**/[Cc]onfig.json*
+
+
+
