@@ -22,14 +22,14 @@ namespace LoginTests.Steps
             _website.loginPage.Visit();
         }
 
-        [Given(@"I entern my username")]
-        public void GivenIEnternMyUsername()
+        [Given(@"I entern my valid username")]
+        public void GivenIEnternMyValidUsername()
         {
             _website.loginPage.EnterUsername(LoginConfigReader.Username);
         }
 
-        [Given(@"I enter my password")]
-        public void GivenIEnterMyPassword()
+        [Given(@"I enter my valid password")]
+        public void GivenIEnterMyValidPassword()
         {
             _website.loginPage.EnterPassword(LoginConfigReader.Password);
         }

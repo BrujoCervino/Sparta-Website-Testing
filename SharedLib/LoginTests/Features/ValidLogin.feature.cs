@@ -107,10 +107,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("that I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
- testRunner.Given("I entern my username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I entern my valid username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.Given("I enter my password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I enter my valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 11
  testRunner.When("I press the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
