@@ -35,8 +35,8 @@ namespace LoginTests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ValidLogin", "\tIn order to access the system\r\n\tAs a member of the requtement team\r\n\tI want to b" +
-                    "e able to login with my username and password", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ValidLogin", "\tIn order to access the system\r\n\tAs a member of the recruitment team\r\n\tI want to " +
+                    "be able to login with my username and password", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
