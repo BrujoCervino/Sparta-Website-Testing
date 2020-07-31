@@ -1,5 +1,7 @@
 ﻿using NUnit.Framework;
 using PageObjectModels;
+using System;
+using System.Threading;
 
 namespace ResultsTests
 {
@@ -16,7 +18,7 @@ namespace ResultsTests
 
         [TestCase("chrome")]
         [TestCase("firefox")]
-        public void CanAccessResultsPage(in string driverName) 
+        public void CanAccessResultsPage(in string driverName)
         {
             // Arrange, act
             spartaWebsite = new SpartaWebsite(driverName);
@@ -25,7 +27,7 @@ namespace ResultsTests
             spartaWebsite.resultsPage.PasswordBox.SendKeys(LoginConfigReader.Password);
             spartaWebsite.resultsPage.SubmitButton.Click();
             spartaWebsite.resultsPage.Visit();
-            spartaWebsite.resultsPage.UpdateButton.Click(); 
+            spartaWebsite.resultsPage.UpdateButton.Click();
             // Assert
             Assert.That(spartaWebsite.SeleniumDriver.Url, Is.EqualTo(PagesConfigReader.PollsUrl));
         }

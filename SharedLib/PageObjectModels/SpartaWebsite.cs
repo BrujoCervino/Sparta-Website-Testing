@@ -12,6 +12,7 @@ namespace PageObjectModels
         public readonly AssessmentPage assessmentPage;
         public readonly ResultsPage resultsPage;
         public readonly LoginPage loginPage;
+        public readonly CodinGame codinGame;
         public readonly DispatchesPage dispatchesPage;
         public readonly IWebDriver SeleniumDriver;
 
@@ -21,6 +22,7 @@ namespace PageObjectModels
             assessmentPage = new AssessmentPage(SeleniumDriver);
             resultsPage = new ResultsPage(SeleniumDriver);
             loginPage = new LoginPage(SeleniumDriver);
+            codinGame = new CodinGame(SeleniumDriver);
             dispatchesPage = new DispatchesPage(SeleniumDriver);
             
         }
