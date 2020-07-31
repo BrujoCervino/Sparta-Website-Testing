@@ -22,16 +22,22 @@ namespace LoginTests.Steps
             _website.loginPage.Visit();
         }
 
-        [When(@"I entern my username")]
-        public void WhenIEnternMyUsername()
+        [Given(@"I entern my username")]
+        public void GivenIEnternMyUsername()
         {
             _website.loginPage.EnterUsername(LoginConfigReader.Username);
         }
 
-        [When(@"I enter my password")]
-        public void WhenIEnterMyPassword()
+        [Given(@"I enter my password")]
+        public void GivenIEnterMyPassword()
         {
             _website.loginPage.EnterPassword(LoginConfigReader.Password);
+        }
+
+        [When(@"I press the login button")]
+        public void WhenIPressTheLoginButton()
+        {
+            _website.loginPage.SubmitLoginInfo();
         }
 
         [Then(@"the page title should be ""(.*)""")]

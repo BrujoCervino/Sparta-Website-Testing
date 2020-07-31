@@ -6,6 +6,7 @@
 @Login
 Scenario: Valid login
 	Given that I am on the login page
-	When I entern my username
-	And I enter my password
+	Given I entern my username
+	Given I enter my password
+	When I press the login button
 	Then the page title should be "Send Assessment"
