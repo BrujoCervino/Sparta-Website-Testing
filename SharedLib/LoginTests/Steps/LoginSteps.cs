@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using PageObjectModels;
 using System;
 using TechTalk.SpecFlow;
@@ -46,23 +47,11 @@ namespace LoginTests.Steps
             _website.loginPage.EnterPassword(LoginConfigReader.Password);
         }
 
-        //[Given(@"I entered an empty as a username")]
-        //public void GivenIEnteredAnEmptyAsAUsername()
-        //{
-        //    _website.loginPage.EnterUsername("");
-        //}
-
         [Given(@"I enter my valid username")]
         public void GivenIEnterMyValidUsername()
         {
             _website.loginPage.EnterUsername(LoginConfigReader.Username);
         }
-
-        //[Given(@"I entered an empty as a password")]
-        //public void GivenIEnteredAnEmptyAsAPassword()
-        //{
-        //    _website.loginPage.EnterPassword("");
-        //}
 
         [Given(@"I entered nothing into the username textbox")]
         public void GivenIEnteredNothingIntoTheUsernameTextbox()
@@ -102,10 +91,71 @@ namespace LoginTests.Steps
             Assert.That(errorMsg, Is.EqualTo(_website.loginPage.GetErrorMsg()));
         }
 
-        [AfterScenario]
-        public void AfterScenario()
+        [Given(@"I am on Chrome browser")]
+        public void GivenIAmOnChromeBrowser()
         {
-            _website.Close();
+            _website = new SpartaWebsite("chrome");
+        }
+
+        [Given(@"I am on the homepage")]
+        public void GivenIAmOnTheHomepage()
+        {
+            _website.loginPage.Visit();
+        }
+
+        [When(@"I type in the home page url")]
+        public void WhenITypeInTheHomePageUrl()
+        {
+            _website.assessmentPage.Visit();
+        }
+
+        [When(@"I press the Sparta logo")]
+        public void WhenIPressTheSpartaLogo()
+        {
+            _website.SeleniumDriver.FindElement(By.CssSelector("body > nav > a > img")).Click();
+        }
+
+        [When(@"I type in the results page url")]
+        public void WhenITypeInTheResultsPageUrl()
+        {
+            _website.resultsPage.Visit();
+        }
+
+        [When(@"I type in the dispatches page url")]
+        public void WhenITypeInTheDispatchesPageUrl()
+        {
+            _website.dispatchesPage.Visit();
+        }
+
+        //[When(@"I type in the polling page url")]
+        //public void WhenITypeInThePollingPageUrl()
+        //{
+        //    _spartaWebsite.pollingPage.Visit();
+        //}
+
+        [When(@"I type in the register page url")]
+        public void WhenITypeInTheRegisterPageUrl()
+        {
+            _website.SeleniumDriver.Navigate().GoToUrl(PagesConfigReader.BaseUrl + "/register");
+        }
+
+
+        [Then(@"I should be on the login page")]
+        public void ThenIShouldBeOnTheLoginPage()
+        {
+            Assert.That(_website.SeleniumDriver.FindElement(By.Id("login_title")).Displayed, Is.True);
+        }
+
+        [Then(@"I should see an error message ""(.*)""")]
+        public void ThenIShouldSeeAnErrorMessage(string noTokenMessage)
+        {
+            Assert.That(_website.loginPage.GetErrorMsg, Is.EqualTo(noTokenMessage));
+        }
+
+        [AfterScenario]
+        public void DisposeWebDriver()
+        {
+            _website.SeleniumDriver.Dispose();
         }
     }
 }
