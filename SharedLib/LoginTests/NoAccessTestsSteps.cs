@@ -23,6 +23,12 @@ namespace LoginTests
             _spartaWebsite.loginPage.Visit();
         }
 
+        [When(@"I type in the home page url")]
+        public void WhenITypeInTheHomePageUrl()
+        {
+            _spartaWebsite.assessmentPage.Visit();
+        }
+
         [When(@"I press the Sparta logo")]
         public void WhenIPressTheSpartaLogo()
         {

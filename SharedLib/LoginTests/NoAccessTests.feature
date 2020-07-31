@@ -17,6 +17,13 @@ Scenario: Try to access dispatches page with no login
 	Then I should be on the login page
 	And I should see an error message "Error: No token provided, please login to access this page!"
 
+@NoTokenNoAccess
+Scenario: Try to access home page with no login
+	Given I am on Chrome browser
+	When I type in the home page url
+	Then I should be on the login page
+	And I should see an error message "Error: No token provided, please login to access this page!"
+
 #@NoTokenNoAccess
 #Scenario: Try to access results page with no login
 #	Given I am on Chrome browser
