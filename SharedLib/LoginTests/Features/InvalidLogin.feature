@@ -69,23 +69,41 @@ Scenario: Empty username with empty Password
 @Login
 Scenario: Whitespace username with valid Password
 	Given that I am on the login page
-	Given I entered "          " as a username
+	Given I entered <num> chars of whitespace in the username textbox
 	Given I enter my valid password
 	When I press the login button
 	Then the error message should be "Error: Incorrect password, please try to login again!"
+
+	Examples:
+		| num |
+		| 1   |
+		| 10  |
+		| 50  |
 
 @Login
 Scenario: Valid username with whitespace Password
 	Given that I am on the login page
 	Given I enter my valid username
-	Given I entered "          " as a password
+	Given I entered <num> chars of whitespace in the password textbox
 	When I press the login button
 	Then the error message should be "Error: Incorrect password, please try to login again!"
+
+	Examples:
+		| num |
+		| 1   |
+		| 10  |
+		| 50  |
 
 @Login
 Scenario: Whitespace username with whitespace Password
 	Given that I am on the login page
-	Given I entered "          " as a username
-	Given I entered "          " as a password
+	Given I entered <num1> chars of whitespace in the username textbox
+	Given I entered <num2> chars of whitespace in the password textbox
 	When I press the login button
 	Then the error message should be "Error: Incorrect password, please try to login again!"
+
+	Examples:
+		| num1 | num2 |
+		| 1    | 1    |
+		| 10   | 10   |
+		| 50   | 50   |
