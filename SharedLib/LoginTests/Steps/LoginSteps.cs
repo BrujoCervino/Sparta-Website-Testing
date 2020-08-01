@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using PageObjectModels;
-using System;
 using TechTalk.SpecFlow;
 
 namespace LoginTests.Steps
@@ -11,12 +10,21 @@ namespace LoginTests.Steps
     {
         private SpartaWebsite _website;
 
+        #region Setup/Teardown
         [BeforeScenario]
         public void Setup()
         {
             _website = new SpartaWebsite("chrome");
         }
 
+        [AfterScenario]
+        public void DisposeWebDriver()
+        {
+            _website.Close();
+        }
+        #endregion
+
+        #region Arrage
         [Given(@"that I am on the login page")]
         public void GivenThatIAmOnTheLoginPage()
         {
@@ -65,32 +73,6 @@ namespace LoginTests.Steps
             _website.loginPage.EnterPassword("");
         }
 
-
-        [Given(@"I entern my valid username")]
-        public void GivenIEnternMyValidUsername()
-        {
-            _website.loginPage.EnterUsername(LoginConfigReader.Username);
-        }
-
-        [Then(@"the page title should be ""(.*)""")]
-        public void ThenThePageTitleShouldBe(string pageTitle)
-        {
-            Assert.That(pageTitle, Is.EqualTo(_website.loginPage.GetPageTitle()));
-        }
-
-
-        [When(@"I press the login button")]
-        public void WhenIPressTheLoginButton()
-        {
-            _website.loginPage.SubmitLoginInfo();
-        }
-
-        [Then(@"the error message should be ""(.*)""")]
-        public void ThenTheErrorMessageShouldBe(string errorMsg)
-        {
-            Assert.That(errorMsg, Is.EqualTo(_website.loginPage.GetErrorMsg()));
-        }
-
         [Given(@"I am on Chrome browser")]
         public void GivenIAmOnChromeBrowser()
         {
@@ -101,6 +83,20 @@ namespace LoginTests.Steps
         public void GivenIAmOnTheHomepage()
         {
             _website.loginPage.Visit();
+        }
+
+        [Given(@"I entern my valid username")]
+        public void GivenIEnternMyValidUsername()
+        {
+            _website.loginPage.EnterUsername(LoginConfigReader.Username);
+        }
+        #endregion
+
+        #region Act       
+        [When(@"I press the login button")]
+        public void WhenIPressTheLoginButton()
+        {
+            _website.loginPage.SubmitLoginInfo();
         }
 
         [When(@"I type in the home page url")]
@@ -138,7 +134,14 @@ namespace LoginTests.Steps
         {
             _website.SeleniumDriver.Navigate().GoToUrl(PagesConfigReader.BaseUrl + "/register");
         }
+        #endregion
 
+        #region Assert
+        [Then(@"the error message should be ""(.*)""")]
+        public void ThenTheErrorMessageShouldBe(string errorMsg)
+        {
+            Assert.That(errorMsg, Is.EqualTo(_website.loginPage.GetErrorMsg()));
+        }
 
         [Then(@"I should be on the login page")]
         public void ThenIShouldBeOnTheLoginPage()
@@ -152,10 +155,11 @@ namespace LoginTests.Steps
             Assert.That(_website.loginPage.GetErrorMsg, Is.EqualTo(noTokenMessage));
         }
 
-        [AfterScenario]
-        public void DisposeWebDriver()
+        [Then(@"the page title should be ""(.*)""")]
+        public void ThenThePageTitleShouldBe(string pageTitle)
         {
-            _website.SeleniumDriver.Dispose();
+            Assert.That(pageTitle, Is.EqualTo(_website.loginPage.GetPageTitle()));
         }
+        #endregion
     }
 }
