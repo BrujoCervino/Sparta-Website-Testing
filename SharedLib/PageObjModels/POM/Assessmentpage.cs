@@ -1,5 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Linq;
+using System.Threading;
 
 namespace PageObjectModels.POM
 {
@@ -31,15 +34,23 @@ namespace PageObjectModels.POM
         {
             candidateEmail.Clear();
             candidateEmail.SendKeys(cEmail);
+            Thread.Sleep(3000);
+
         }
 
         public void EnterRecruiterEmail(string rEmail)
         {
             recruiterEmail.Clear();
             recruiterEmail.SendKeys(rEmail);
+            Thread.Sleep(10000);
+
         }
 
-        public void SubmitDetails() => submitButton.Click();
+        public void SubmitDetails()
+        {
+            
+            submitButton.Click();
+        }
 
         public void SendPsychometric()
         {
@@ -48,7 +59,7 @@ namespace PageObjectModels.POM
 
         public void SelectAssessment(string cource)
         {
-            asessmentDropDown.SelectByText(cource);
+           asessmentDropDown.SelectByValue(cource);
         }
 
         public void GotoDispatch()
@@ -69,6 +80,13 @@ namespace PageObjectModels.POM
         public void Logout()
         {
             logout.Click();
+        }
+
+        public string CaptureAlertMessage()
+        {
+            var allertM = _seleniumDriver.SwitchTo().Alert();
+            return allertM.ToString();
+
         }
     }
 }
