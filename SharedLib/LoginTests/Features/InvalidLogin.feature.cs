@@ -396,11 +396,20 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Whitespace username with valid Password")]
         [NUnit.Framework.CategoryAttribute("Login")]
-        public virtual void WhitespaceUsernameWithValidPassword()
+        [NUnit.Framework.TestCaseAttribute("1", null)]
+        [NUnit.Framework.TestCaseAttribute("10", null)]
+        [NUnit.Framework.TestCaseAttribute("50", null)]
+        public virtual void WhitespaceUsernameWithValidPassword(string num, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "Login"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("num", num);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Whitespace username with valid Password", null, tagsOfScenario, argumentsOfScenario);
 #line 70
 this.ScenarioInitialize(scenarioInfo);
@@ -426,7 +435,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("that I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 72
- testRunner.Given("I entered \"          \" as a username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I entered {0} chars of whitespace in the username textbox", num), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 73
  testRunner.Given("I enter my valid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
@@ -445,13 +454,22 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Valid username with whitespace Password")]
         [NUnit.Framework.CategoryAttribute("Login")]
-        public virtual void ValidUsernameWithWhitespacePassword()
+        [NUnit.Framework.TestCaseAttribute("1", null)]
+        [NUnit.Framework.TestCaseAttribute("10", null)]
+        [NUnit.Framework.TestCaseAttribute("50", null)]
+        public virtual void ValidUsernameWithWhitespacePassword(string num, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "Login"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("num", num);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Valid username with whitespace Password", null, tagsOfScenario, argumentsOfScenario);
-#line 78
+#line 84
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -471,19 +489,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 79
+#line 85
  testRunner.Given("that I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 80
+#line 86
  testRunner.Given("I enter my valid username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 81
- testRunner.Given("I entered \"          \" as a password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 87
+ testRunner.Given(string.Format("I entered {0} chars of whitespace in the password textbox", num), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 82
+#line 88
  testRunner.When("I press the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 83
+#line 89
  testRunner.Then("the error message should be \"Error: Incorrect password, please try to login again" +
                         "!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -494,13 +512,23 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Whitespace username with whitespace Password")]
         [NUnit.Framework.CategoryAttribute("Login")]
-        public virtual void WhitespaceUsernameWithWhitespacePassword()
+        [NUnit.Framework.TestCaseAttribute("1", "1", null)]
+        [NUnit.Framework.TestCaseAttribute("10", "10", null)]
+        [NUnit.Framework.TestCaseAttribute("50", "50", null)]
+        public virtual void WhitespaceUsernameWithWhitespacePassword(string num1, string num2, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "Login"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("num1", num1);
+            argumentsOfScenario.Add("num2", num2);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Whitespace username with whitespace Password", null, tagsOfScenario, argumentsOfScenario);
-#line 86
+#line 98
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -520,19 +548,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 87
+#line 99
  testRunner.Given("that I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 88
- testRunner.Given("I entered \"          \" as a username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 100
+ testRunner.Given(string.Format("I entered {0} chars of whitespace in the username textbox", num1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 89
- testRunner.Given("I entered \"          \" as a password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 101
+ testRunner.Given(string.Format("I entered {0} chars of whitespace in the password textbox", num2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 90
+#line 102
  testRunner.When("I press the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 91
+#line 103
  testRunner.Then("the error message should be \"Error: Incorrect password, please try to login again" +
                         "!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
