@@ -135,7 +135,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginNavigationTests.cs" />
+    <Compile Include="DriverTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
   </ItemGroup>

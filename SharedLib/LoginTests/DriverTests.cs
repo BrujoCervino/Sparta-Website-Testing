@@ -3,7 +3,7 @@ using PageObjectModels;
 
 namespace LoginTests
 {
-    public class LoginNavigationTests
+    public class DriverTests
     {
         private SpartaWebsite _chromeWebsite, _firefoxWebsite;
         private const int _sleepTime = 5;
