@@ -14,6 +14,7 @@ namespace PageObjectModels
         public readonly LoginPage loginPage;
         public readonly CodinGame codinGame;
         public readonly DispatchesPage dispatchesPage;
+        public readonly PollsPage pollsPage;
         public readonly IWebDriver SeleniumDriver;
 
         public SpartaWebsite(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5)
@@ -24,7 +25,7 @@ namespace PageObjectModels
             loginPage = new LoginPage(SeleniumDriver);
             codinGame = new CodinGame(SeleniumDriver);
             dispatchesPage = new DispatchesPage(SeleniumDriver);
-            
+            pollsPage = new PollsPage(SeleniumDriver);
         }
 
         internal void SleepDriver(int sleepTime) => Thread.Sleep(TimeSpan.FromSeconds(sleepTime));

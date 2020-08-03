@@ -5,8 +5,10 @@ using System.Linq;
 
 namespace PageObjectModels.POM
 {
-    public class DispatchesPage : SuperPage
+    public class DispatchesPage : TablePage
     {
+        private IWebElement tableBody => _seleniumDriver.FindElement(By.CssSelector(".table > tbody:nth-child(2)"));
+
         public List<DispatchesKeyValues> dispatchesList = new List<DispatchesKeyValues>();
         public ReadOnlyCollection<IWebElement> thElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr th"));
         public ReadOnlyCollection<IWebElement> tdElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr td"));
@@ -37,6 +39,24 @@ namespace PageObjectModels.POM
                     )
                 );
             }
+        }
+
+        public List<List<string>> GetTabelData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
+
+        public bool CheckTestsSentOut(List<string> testNames, int numOfRowsToCompare)
+        {
+            List<string> testsInTable = new List<string>();
+            foreach (List<string> row in GetTabelData(numOfRowsToCompare))
+            {
+                testsInTable.Add(row[3]);
+            }
+
+            foreach (var name in testNames)
+            {
+                if (!testsInTable.Contains(name))
+                    return false;
+            }
+            return true;
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using NUnit.Framework;
 using PageObjectModels;
+using SharedTestTools;
+using System.Collections.Generic;
 
 namespace DispatchesTests
 {
@@ -12,27 +14,16 @@ namespace DispatchesTests
         public void Setup()
         {
             _website = new SpartaWebsite("chrome", _sleepTime, _sleepTime);
-            _website.loginPage.MaximisePage();
-        }
-
-        [Test]
-        public void DriverWorkingTest()
-        {
-            _website.loginPage.Visit();
-            Assert.That(_website.GetUrl(), Is.EqualTo("https://uat.spartaglobal.academy/"));
-        }
+        }       
 
         [Test]
         public void GetTableValues_ReturnValues()
         { // Fragile test, Will have to look further into it when further
-            _website.loginPage.Visit();
-            _website.loginPage.EnterUsername(LoginConfigReader.Username);
-            _website.loginPage.EnterPassword(LoginConfigReader.Password);
-            _website.loginPage.SubmitLoginInfo();
+            TestTools.Login(_website);
             _website.dispatchesPage.Visit();
-            _website.dispatchesPage.GetTableContent();
+            List<List<string>> dispatchesData = _website.dispatchesPage.GetTabelData();
 
-            Assert.That(_website.dispatchesPage.dispatchesList[0].Name, Is.EqualTo("Will Millington"));
+            Assert.That(dispatchesData[0][0], Is.EqualTo("shwetha ashwathappa"));
         }
 
         [TearDown]

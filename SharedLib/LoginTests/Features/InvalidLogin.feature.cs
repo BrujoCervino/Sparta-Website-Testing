@@ -76,13 +76,13 @@ namespace LoginTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Valid username with invalid Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         [NUnit.Framework.TestCaseAttribute("incorrectpassword", null)]
         [NUnit.Framework.TestCaseAttribute("!£$%^&*()_+{}@~<>?", null)]
         public virtual void ValidUsernameWithInvalidPassword(string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -133,13 +133,13 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Invalid username with valid Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         [NUnit.Framework.TestCaseAttribute("incorrectUsername", null)]
         [NUnit.Framework.TestCaseAttribute("!£$%^&*()_+{}@~<>?", null)]
         public virtual void InvalidUsernameWithValidPassword(string username, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -190,13 +190,13 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Invalid username with invalid Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         [NUnit.Framework.TestCaseAttribute("incorrectUsername", "incorrectUsername", null)]
         [NUnit.Framework.TestCaseAttribute("!£$%^&*()_+{}@~<>?", "!£$%^&*()_+{}@~<>?", null)]
         public virtual void InvalidUsernameWithInvalidPassword(string username, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -248,11 +248,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Empty username with valid Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         public virtual void EmptyUsernameWithValidPassword()
         {
             string[] tagsOfScenario = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Empty username with valid Password", null, tagsOfScenario, argumentsOfScenario);
 #line 46
@@ -297,11 +297,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Valid username with empty Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         public virtual void ValidUsernameWithEmptyPassword()
         {
             string[] tagsOfScenario = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Valid username with empty Password", null, tagsOfScenario, argumentsOfScenario);
 #line 54
@@ -346,11 +346,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Empty username with empty Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         public virtual void EmptyUsernameWithEmptyPassword()
         {
             string[] tagsOfScenario = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Empty username with empty Password", null, tagsOfScenario, argumentsOfScenario);
 #line 62
@@ -395,14 +395,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Whitespace username with valid Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         [NUnit.Framework.TestCaseAttribute("1", null)]
         [NUnit.Framework.TestCaseAttribute("10", null)]
         [NUnit.Framework.TestCaseAttribute("50", null)]
         public virtual void WhitespaceUsernameWithValidPassword(string num, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -453,14 +453,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Valid username with whitespace Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         [NUnit.Framework.TestCaseAttribute("1", null)]
         [NUnit.Framework.TestCaseAttribute("10", null)]
         [NUnit.Framework.TestCaseAttribute("50", null)]
         public virtual void ValidUsernameWithWhitespacePassword(string num, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -511,14 +511,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Whitespace username with whitespace Password")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("InvalidLogin")]
         [NUnit.Framework.TestCaseAttribute("1", "1", null)]
         [NUnit.Framework.TestCaseAttribute("10", "10", null)]
         [NUnit.Framework.TestCaseAttribute("50", "50", null)]
         public virtual void WhitespaceUsernameWithWhitespacePassword(string num1, string num2, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Login"};
+                    "InvalidLogin"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

@@ -3,7 +3,7 @@
 	As an unauthorised user
 	I want not be allowed access to the system 
 
-@Login
+@InvalidLogin
 Scenario: Valid username with invalid Password
 	Given that I am on the login page
 	Given I entered my valid username
@@ -16,7 +16,7 @@ Scenario: Valid username with invalid Password
 		| incorrectpassword  |
 		| !£$%^&*()_+{}@~<>? |
 
-@Login
+@InvalidLogin
 Scenario: Invalid username with valid Password
 	Given that I am on the login page
 	Given I entered <username> as a username
@@ -29,7 +29,7 @@ Scenario: Invalid username with valid Password
 		| incorrectUsername  |
 		| !£$%^&*()_+{}@~<>? |
 
-@Login
+@InvalidLogin
 Scenario: Invalid username with invalid Password
 	Given that I am on the login page
 	Given I entered <username> as a username
@@ -42,7 +42,7 @@ Scenario: Invalid username with invalid Password
 		| incorrectUsername  | incorrectUsername  |
 		| !£$%^&*()_+{}@~<>? | !£$%^&*()_+{}@~<>? |
 
-@Login
+@InvalidLogin
 Scenario: Empty username with valid Password
 	Given that I am on the login page
 	Given I entered nothing into the username textbox
@@ -50,7 +50,7 @@ Scenario: Empty username with valid Password
 	When I press the login button
 	Then the error message should be "Error: Incorrect password, please try to login again!"
 
-@Login
+@InvalidLogin
 Scenario: Valid username with empty Password
 	Given that I am on the login page
 	Given I enter my valid username
@@ -58,7 +58,7 @@ Scenario: Valid username with empty Password
 	When I press the login button
 	Then the error message should be "Error: Incorrect password, please try to login again!"
 
-@Login
+@InvalidLogin
 Scenario: Empty username with empty Password
 	Given that I am on the login page
 	Given I entered nothing into the username textbox
@@ -66,7 +66,7 @@ Scenario: Empty username with empty Password
 	When I press the login button
 	Then the error message should be "Error: Incorrect password, please try to login again!"
 
-@Login
+@InvalidLogin
 Scenario: Whitespace username with valid Password
 	Given that I am on the login page
 	Given I entered <num> chars of whitespace in the username textbox
@@ -80,7 +80,7 @@ Scenario: Whitespace username with valid Password
 		| 10  |
 		| 50  |
 
-@Login
+@InvalidLogin
 Scenario: Valid username with whitespace Password
 	Given that I am on the login page
 	Given I enter my valid username
@@ -94,7 +94,7 @@ Scenario: Valid username with whitespace Password
 		| 10  |
 		| 50  |
 
-@Login
+@InvalidLogin
 Scenario: Whitespace username with whitespace Password
 	Given that I am on the login page
 	Given I entered <num1> chars of whitespace in the username textbox
