@@ -16,6 +16,7 @@ namespace AssessmentTests.Steps
             _website = new SpartaWebsite("chrome");
         }
 
+        #region Arrage
         [Given(@"I am in assessment page")]
         public void GivenIAmInAssessmentPage()
         {
@@ -70,14 +71,18 @@ namespace AssessmentTests.Steps
         {
             _website.assessmentPage.EnterRecruiterEmail("shwetha21ashwath@gmail.com");
         }
+        #endregion
 
 
+        #region Act
         [When(@"I press the submit button")]
         public void WhenIPressTheSubmitButton()
         {
             _website.assessmentPage.SubmitDetails();
         }
+        #endregion
 
+        #region Assert
         [Then(@"warning popup message should appear (.*)")]
         public void ThenWarningPopupMessageShouldAppear(string warning)
         {
@@ -88,7 +93,8 @@ namespace AssessmentTests.Steps
         public void ThenIShouldBeShownAnErrorMessage(string errormessage)
         {
             Assert.That(_website.assessmentPage.BadRequest(), Is.EqualTo(errormessage));
-        }
+        } 
+        #endregion
 
 
         [AfterScenario]
