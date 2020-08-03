@@ -6,7 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B8D080EE-3D9C-460C-8B05-C489B8D0AEA4}</ProjectGuid>
+    <ProjectGuid>{14A57FFC-2DF4-4B3D-A717-9E7A660B64DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DispatchesTest</RootNamespace>

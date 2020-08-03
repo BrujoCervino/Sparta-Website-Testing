@@ -3,7 +3,7 @@
   "baseUrl": "https://uat.spartaglobal.academy/",
   "pages": {
     // You'll have to add your own slashes: they should not be hard-coded
-    "dispatches": "dispatches",
+    "despatches": "despatches",
     "polls": "polls",
     "results": "results"
   },
@@ -12,7 +12,6 @@
     "password": "!L0nd0n2020"
   },
   "browserLocations": {
-    "firefox": "C:\\Program Files\\Mozilla Firefox",
-    "chrome": "C:\\Users\\Test\\.nuget\\packages\\selenium.chrome.webdriver\\83.0.0\\driver"
+    "firefox": "C:\\Program Files\\Mozilla Firefox/firefox.exe"
   }
 }
