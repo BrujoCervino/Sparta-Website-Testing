@@ -28,5 +28,6 @@ namespace PageObjectModels
         public string GetCurrentUrl() => _seleniumDriver.Url;
         public string GetPageTitle() => pageTitle.Text;
         public void ClickLogo() => spartaLogo.Click();
+        public void ClickTitle() => pageTitle.Click();
     }
 }
