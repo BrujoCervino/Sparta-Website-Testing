@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsTests", "ResultsTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjModels", "PageObjModels\PageObjModels.csproj", "{DD52ECCC-3358-49F4-BFEB-4862941B26C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavBarTests", "NavBarTests\NavBarTests.csproj", "{D225A20A-11A4-4414-9849-1574DC0DAC59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{DD52ECCC-3358-49F4-BFEB-4862941B26C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD52ECCC-3358-49F4-BFEB-4862941B26C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD52ECCC-3358-49F4-BFEB-4862941B26C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D225A20A-11A4-4414-9849-1574DC0DAC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D225A20A-11A4-4414-9849-1574DC0DAC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D225A20A-11A4-4414-9849-1574DC0DAC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D225A20A-11A4-4414-9849-1574DC0DAC59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
