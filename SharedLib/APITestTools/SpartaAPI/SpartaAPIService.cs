@@ -32,14 +32,4 @@ namespace APITestTools.SpartaAPI
             json_delete_sparta = JsonConvert.DeserializeObject<JObject>(spartaDeleteData);
         }
     }
-    internal class test
-    {
-        [Test]
-        public void testing123()
-        {
-            SpartaAPIService sparta = new SpartaAPIService();
-            sparta.DeleteDispatches();
-            Assert.That(sparta.json_delete_sparta["success"].ToString(), Is.EqualTo("True"));
-        }
-    }
 }
