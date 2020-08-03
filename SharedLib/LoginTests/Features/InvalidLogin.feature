@@ -38,7 +38,7 @@ Scenario: Invalid username with invalid Password
 	Then the error message should be "Error: Incorrect password, please try to login again!"
 
 	Examples:
-		| username           | password           |
+		Thread.Sleep(5000);
 		| incorrectUsername  | incorrectUsername  |
 		| !£$%^&*()_+{}@~<>? | !£$%^&*()_+{}@~<>? |
 
