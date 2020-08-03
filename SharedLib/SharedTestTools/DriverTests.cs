@@ -5,14 +5,13 @@ namespace LoginTests
 {
     public class DriverTests
     {
-        private SpartaWebsite _chromeWebsite, _firefoxWebsite;
         private const int _sleepTime = 5;
 
         [Test]
         public void ChromeDirver_WorkingCorrectly_Test()
         {
             //Arange
-            _chromeWebsite = new SpartaWebsite("chrome");
+            SpartaWebsite _chromeWebsite = new SpartaWebsite("chrome", _sleepTime, _sleepTime);
 
             //Act
             _chromeWebsite.loginPage.Visit();
@@ -29,7 +28,7 @@ namespace LoginTests
         public void FirefoxDirver_WorkingCorrectly_Test()
         {
             //Arange
-            _firefoxWebsite = new SpartaWebsite("firefox", _sleepTime, _sleepTime);
+            SpartaWebsite _firefoxWebsite = new SpartaWebsite("firefox", _sleepTime, _sleepTime);
 
             //Act
             _firefoxWebsite.loginPage.Visit();
