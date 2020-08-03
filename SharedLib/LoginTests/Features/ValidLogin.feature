@@ -3,7 +3,7 @@
 	As a member of the recruitment team
 	I want to be able to login with my username and password
 
-@Login
+@ValidLogin
 Scenario: Valid login
 	Given that I am on the login page
 	Given I entern my valid username

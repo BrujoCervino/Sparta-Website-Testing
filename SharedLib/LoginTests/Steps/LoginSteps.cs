@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using PageObjectModels;
+using SharedTestTools;
 using TechTalk.SpecFlow;
 
 namespace LoginTests.Steps
@@ -46,13 +47,13 @@ namespace LoginTests.Steps
         [Given(@"I entered (.*) chars of whitespace in the username textbox")]
         public void GivenIEnteredCharsOfWhitespaceInTheUsernameTextbox(int numOfChars)
         {
-            _website.loginPage.EnterUsername(new string(' ', numOfChars));
+            _website.loginPage.EnterUsername(TestTools.GenerateWhiteSpaceString(numOfChars));
         }
 
         [Given(@"I entered (.*) chars of whitespace in the password textbox")]
         public void GivenIEnteredCharsOfWhitespaceInThePasswordTextbox(int numOfChars)
         {
-            _website.loginPage.EnterPassword(new string(' ', numOfChars));
+            _website.loginPage.EnterPassword(TestTools.GenerateWhiteSpaceString(numOfChars));
         }
 
 
