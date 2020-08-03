@@ -7,13 +7,14 @@ using static PageObjectModels.Driver_Config.SeleniumDriverFactory;
 
 namespace PageObjectModels
 {
-    // This should maybe inherit from the page class.
     public class SpartaWebsite
     {
         public readonly AssessmentPage assessmentPage;
         public readonly ResultsPage resultsPage;
         public readonly LoginPage loginPage;
+        public readonly CodinGame codinGame;
         public readonly DispatchesPage dispatchesPage;
+        public readonly PollsPage pollsPage;
         public readonly IWebDriver SeleniumDriver;
 
         public SpartaWebsite(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5)
@@ -22,8 +23,9 @@ namespace PageObjectModels
             assessmentPage = new AssessmentPage(SeleniumDriver);
             resultsPage = new ResultsPage(SeleniumDriver);
             loginPage = new LoginPage(SeleniumDriver);
+            codinGame = new CodinGame(SeleniumDriver);
             dispatchesPage = new DispatchesPage(SeleniumDriver);
-            
+            pollsPage = new PollsPage(SeleniumDriver);
         }
 
         internal void SleepDriver(int sleepTime) => Thread.Sleep(TimeSpan.FromSeconds(sleepTime));
