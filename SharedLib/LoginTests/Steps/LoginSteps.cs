@@ -104,6 +104,11 @@ namespace LoginTests.Steps
         {
             _website.loginPage.EnterUsername(LoginConfigReader.Username);
         }
+        [Given(@"I am logged in correctly")]
+        public void GivenIAmLoggedInCorrectly()
+        {
+            TestTools.Login(_website);
+        }
         #endregion
 
         #region Act       
@@ -137,16 +142,21 @@ namespace LoginTests.Steps
             _website.dispatchesPage.Visit();
         }
 
-        //[When(@"I type in the polling page url")]
-        //public void WhenITypeInThePollingPageUrl()
-        //{
-        //    _spartaWebsite.pollingPage.Visit();
-        //}
+        [When(@"I type in the polling page url")]
+        public void WhenITypeInThePollingPageUrl()
+        {
+            _website.pollsPage.Visit();
+        }
 
         [When(@"I type in the register page url")]
         public void WhenITypeInTheRegisterPageUrl()
         {
-            _website.SeleniumDriver.Navigate().GoToUrl(PagesConfigReader.BaseUrl + "/register");
+            _website.SeleniumDriver.Navigate().GoToUrl(PagesConfigReader.BaseUrl + "register");
+        }
+        [When(@"I type in the login page url")]
+        public void WhenITypeInTheLoginPageUrl()
+        {
+            _website.loginPage.Visit();
         }
         #endregion
 
@@ -174,6 +184,43 @@ namespace LoginTests.Steps
         {
             Assert.That(pageTitle, Is.EqualTo(_website.loginPage.GetPageTitle()));
         }
+        [Then(@"I should be on the ""(.*)"" page")]
+        public void ThenIShouldBeOnThePage(string page)
+        {
+            string targetUrl = "";
+            switch (page)
+            {
+                case "home":
+                    targetUrl = _website.assessmentPage.GetCurrentUrl();
+                    break;
+                case "polling":
+                    targetUrl = _website.pollsPage.GetCurrentUrl();
+                    break;
+                case "results":
+                    targetUrl = _website.resultsPage.GetCurrentUrl();
+                    break;
+                case "dispatches":
+                    targetUrl = _website.dispatchesPage.GetCurrentUrl();
+                    break;
+            }
+            Assert.That(_website.GetUrl(), Does.Contain(targetUrl));
+        }
+        [Then(@"I should be not see the ""(.*)"" page")]
+        public void ThenIShouldBeNotSeeThePage(string page)
+        {
+            string targetUrl = "";
+            switch (page)
+            {
+                case "login":
+                    targetUrl = _website.loginPage.GetCurrentUrl();
+                    break;
+                case "register":
+                    targetUrl = PagesConfigReader.BaseUrl + "register";
+                    break;
+            }
+            Assert.That(_website.GetUrl, Does.Not.Contain(targetUrl));
+        }
         #endregion
+
     }
 }
