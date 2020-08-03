@@ -76,11 +76,11 @@ namespace LoginTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Valid login")]
-        [NUnit.Framework.CategoryAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("ValidLogin")]
         public virtual void ValidLogin()
         {
             string[] tagsOfScenario = new string[] {
-                    "Login"};
+                    "ValidLogin"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Valid login", null, tagsOfScenario, argumentsOfScenario);
 #line 7

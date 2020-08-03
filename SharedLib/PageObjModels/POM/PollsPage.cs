@@ -5,38 +5,35 @@ using System.Linq;
 
 namespace PageObjectModels.POM
 {
-    public class DispatchesPage : SuperPage
+    public class PollsPage : SuperPage
     {
-        public List<DispatchesKeyValues> dispatchesList = new List<DispatchesKeyValues>();
+        public List<PollsKeyValues> pollsList = new List<PollsKeyValues>();
         public ReadOnlyCollection<IWebElement> thElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr th"));
         public ReadOnlyCollection<IWebElement> tdElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr td"));
 
-        public DispatchesPage(IWebDriver seleniumDriver) : base(seleniumDriver)
+        public PollsPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
-            _url = PagesConfigReader.DispatchesUrl;
+            _url = PagesConfigReader.PollsUrl; 
         }
 
         public void GetTableContent()
-        { // Code is temporary (Doom is Eternal), Will look towards a better approach.
+        { 
             var splitTds = tdElements.Select((x, i) => new { Index = i, Value = x })
-                .GroupBy(x => x.Index / 7)
+                .GroupBy(x => x.Index / 3)
                 .Select(x => x.Select(v => v.Value).ToList()).ToList();
 
             for (int i = 0; i < thElements.Count; i++)
             {
-                dispatchesList.Add(
-                    new DispatchesKeyValues(   
+                pollsList.Add(
+                    new PollsKeyValues(
                         thElements[i].Text,
                         splitTds[i][0].Text,
                         splitTds[i][1].Text,
-                        splitTds[i][2].Text,
-                        splitTds[i][3].Text,
-                        splitTds[i][4].Text,
-                        splitTds[i][5].Text,
-                        splitTds[i][6].Text
+                        splitTds[i][2].Text
                     )
                 );
             }
         }
+
     }
 }

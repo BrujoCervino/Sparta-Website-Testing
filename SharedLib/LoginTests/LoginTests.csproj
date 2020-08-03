@@ -135,8 +135,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginNavigationTests.cs" />
-    <Compile Include="NoAccessTestsSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
   </ItemGroup>
@@ -144,13 +142,17 @@
     <None Include="app.config" />
     <None Include="Features\InvalidLogin.feature" />
     <None Include="Features\ValidLogin.feature" />
-    <None Include="NoAccessTests.feature" />
+    <None Include="Features\NoAccessTests.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PageObjModels\PageObjModels.csproj">
       <Project>{DD52ECCC-3358-49F4-BFEB-4862941B26C1}</Project>
       <Name>PageObjModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedTestTools\SharedTestTools.csproj">
+      <Project>{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}</Project>
+      <Name>SharedTestTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

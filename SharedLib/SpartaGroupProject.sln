@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjModels", "PageObjMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavBarTests", "NavBarTests\NavBarTests.csproj", "{D225A20A-11A4-4414-9849-1574DC0DAC59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollsTests", "PollsTests\PollsTests.csproj", "{73D0AA62-82BE-46A6-9E3A-541C1091CE23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedTestTools", "SharedTestTools\SharedTestTools.csproj", "{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,14 @@ Global
 		{D225A20A-11A4-4414-9849-1574DC0DAC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D225A20A-11A4-4414-9849-1574DC0DAC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D225A20A-11A4-4414-9849-1574DC0DAC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D0AA62-82BE-46A6-9E3A-541C1091CE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D0AA62-82BE-46A6-9E3A-541C1091CE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D0AA62-82BE-46A6-9E3A-541C1091CE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D0AA62-82BE-46A6-9E3A-541C1091CE23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
