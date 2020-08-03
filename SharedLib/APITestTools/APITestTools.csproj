@@ -62,7 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpartaAPI\SpartaAPIManager.cs" />
     <Compile Include="SpartaAPI\SpartaAPIService.cs" />
