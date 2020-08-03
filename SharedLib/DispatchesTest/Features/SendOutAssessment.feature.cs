@@ -76,11 +76,11 @@ namespace DispatchesTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Send CSharp Assessment")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("SendCSharpAssessment")]
         public virtual void SendCSharpAssessment()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "SendCSharpAssessment"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Send CSharp Assessment", null, tagsOfScenario, argumentsOfScenario);
 #line 7
@@ -110,7 +110,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("the assessment dropdown has CSharp selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.And("\"Test name\" is entered as a candidate name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("\"Test CSharp name\" is entered as a candidate name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
  testRunner.And("\"testproject.dummy456@gmail.com\" is entered as the candidate email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -132,7 +132,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "value"});
                 table1.AddRow(new string[] {
                             "Name",
-                            "Test name"});
+                            "Test CSharp name"});
                 table1.AddRow(new string[] {
                             "Email",
                             "testproject.dummy456@gmail.com"});
@@ -150,6 +150,78 @@ this.ScenarioInitialize(scenarioInfo);
                             "No"});
 #line 16
  testRunner.Then("The dispatches table should have a new entry in it with the following data:", ((string)(null)), table1, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Send CSharp Assessment With Psychometric")]
+        [NUnit.Framework.CategoryAttribute("SendCSharpAssessmentWithPsychometric")]
+        public virtual void SendCSharpAssessmentWithPsychometric()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "SendCSharpAssessmentWithPsychometric"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Send CSharp Assessment With Psychometric", null, tagsOfScenario, argumentsOfScenario);
+#line 26
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 27
+ testRunner.Given("I have logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 28
+ testRunner.And("the assessment dropdown has CSharp selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 29
+ testRunner.And("the Psychometric check box has been selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 30
+ testRunner.And("\"Test with Psychometric name\" is entered as a candidate name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
+ testRunner.And("\"testproject.dummy456@gmail.com\" is entered as the candidate email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 32
+ testRunner.And("\"testproject.dummy456@gmail.com\" is entered as the recruiter email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 33
+ testRunner.And("Non of the text boxes are in focus", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 34
+ testRunner.When("The submit button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 35
+ testRunner.And("I am on the dispatches page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 36
+ testRunner.Then("The top two rows should have the name \"Test with Psychometric name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Assessment"});
+                table2.AddRow(new string[] {
+                            "csharp"});
+                table2.AddRow(new string[] {
+                            "psychometric"});
+#line 37
+ testRunner.And("The top two rows should have a the following assessments:", ((string)(null)), table2, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -41,6 +41,22 @@ namespace PageObjectModels.POM
             }
         }
 
-        public List<List<string>> GetTabelData() => ConvertTable(tableBody);
+        public List<List<string>> GetTabelData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
+
+        public bool CheckTestsSentOut(List<string> testNames, int numOfRowsToCompare)
+        {
+            List<string> testsInTable = new List<string>();
+            foreach (List<string> row in GetTabelData(numOfRowsToCompare))
+            {
+                testsInTable.Add(row[3]);
+            }
+
+            foreach (var name in testNames)
+            {
+                if (!testsInTable.Contains(name))
+                    return false;
+            }
+            return true;
+        }
     }
 }

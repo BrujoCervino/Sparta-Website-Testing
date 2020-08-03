@@ -63,6 +63,12 @@ namespace DispatchesTests.Steps
         {
             _website.assessmentPage.ClickTitle();
         }
+
+        [Given(@"the Psychometric check box has been selected")]
+        public void GivenThePsychometricCheckBoxHasBeenSelected()
+        {
+            _website.assessmentPage.SendPsychometric();
+        }
         #endregion
 
         #region Act
@@ -77,7 +83,6 @@ namespace DispatchesTests.Steps
         {
             _website.dispatchesPage.Visit();
         }
-
         #endregion
 
         #region Assert
@@ -91,6 +96,25 @@ namespace DispatchesTests.Steps
             Assert.That(dispatchRow[3], Is.EqualTo(table.Rows[3].Values.ToList()[1]));
             Assert.That(dispatchRow[6], Is.EqualTo(table.Rows[4].Values.ToList()[1]));
             Assert.That(dispatchRow[7], Is.EqualTo(table.Rows[5].Values.ToList()[1]));
+        }
+
+        [Then(@"The top two rows should have the name ""(.*)""")]
+        public void ThenTheTopTwoRowsShouldHaveTheName(string name)
+        {
+            List<List<string>> data = _website.dispatchesPage.GetTabelData(2);
+
+            Assert.That(name, Is.EqualTo(data[0][0]).And.EqualTo(data[1][0]));
+        }
+
+        [Then(@"The top two rows should have a the following assessments:")]
+        public void ThenTheTopTwoRowsShouldHaveATheFollowingAssessments(Table table)
+        {
+            List<string> testNames = new List<string>();
+            foreach (TableRow row in table.Rows)
+            {
+                testNames.Add(row[0]);
+            }
+            Assert.That(_website.dispatchesPage.CheckTestsSentOut(testNames, 2));
         }
         #endregion
     }
