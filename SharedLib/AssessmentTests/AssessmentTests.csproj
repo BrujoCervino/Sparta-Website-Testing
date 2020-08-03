@@ -142,12 +142,17 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Feature\InvalidInput.feature" />
+    <None Include="Feature\InvalidEmail.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PageObjModels\PageObjModels.csproj">
       <Project>{DD52ECCC-3358-49F4-BFEB-4862941B26C1}</Project>
       <Name>PageObjModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedTestTools\SharedTestTools.csproj">
+      <Project>{d6a6f226-9b29-4019-abf6-263e31ba6bd2}</Project>
+      <Name>SharedTestTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

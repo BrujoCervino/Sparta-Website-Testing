@@ -2,6 +2,7 @@
 using PageObjectModels;
 using System;
 using TechTalk.SpecFlow;
+using SharedTestTools;
 
 namespace AssessmentTests.Steps
 {
@@ -18,11 +19,7 @@ namespace AssessmentTests.Steps
         [Given(@"I am in assessment page")]
         public void GivenIAmInAssessmentPage()
         {
-            _website.loginPage.Visit();
-            _website.loginPage.EnterUsername(LoginConfigReader.Username);
-            _website.loginPage.EnterPassword(LoginConfigReader.Password);
-            _website.loginPage.SubmitLoginInfo();
-            _website.assessmentPage.Visit();
+            TestTools.Login(_website);
 
         }
 
@@ -50,15 +47,47 @@ namespace AssessmentTests.Steps
             _website.assessmentPage.EnterRecruiterEmail(rEmail);
         }
 
+        [Given(@"I have valid the Candidate email")]
+        public void GivenIHaveValidTheCandidateEmail()
+        {
+            _website.assessmentPage.EnterCandidateEmail("shwetha21ashwath@gmail.com");
+        }
+
+        [Given(@"I have Invalid the Recruiter email (.*)")]
+        public void GivenIHaveInvalidTheRecruiterEmail(string rEmail)
+        {
+            _website.assessmentPage.EnterRecruiterEmail(rEmail);
+        }
+
+        [Given(@"I have Invalid the Candidate email (.*)")]
+        public void GivenIHaveInvalidTheCandidateEmail(string cemail)
+        {
+            _website.assessmentPage.EnterCandidateEmail(cemail);
+        }
+
+        [Given(@"I have valid the Recruiter email")]
+        public void GivenIHaveValidTheRecruiterEmail()
+        {
+            _website.assessmentPage.EnterRecruiterEmail("shwetha21ashwath@gmail.com");
+        }
+
+
         [When(@"I press the submit button")]
         public void WhenIPressTheSubmitButton()
         {
             _website.assessmentPage.SubmitDetails();
         }
+
         [Then(@"warning popup message should appear (.*)")]
         public void ThenWarningPopupMessageShouldAppear(string warning)
         {
             Assert.That(_website.assessmentPage.CaptureAlertMessage(), Is.EqualTo(warning));
+        }
+
+        [Then(@"i should be shown an error message (.*)")]
+        public void ThenIShouldBeShownAnErrorMessage(string errormessage)
+        {
+            Assert.That(_website.assessmentPage.BadRequest(), Is.EqualTo(errormessage));
         }
 
 

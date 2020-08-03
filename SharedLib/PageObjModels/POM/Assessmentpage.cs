@@ -18,6 +18,7 @@ namespace PageObjectModels.POM
         private IWebElement results => _seleniumDriver.FindElement(By.CssSelector("[href *='/results']"));
         private IWebElement polls => _seleniumDriver.FindElement(By.CssSelector("[href *='/polls']"));
         private IWebElement logout => _seleniumDriver.FindElement(By.CssSelector("[href *='/logout']"));
+        private IWebElement errorMessage => _seleniumDriver.FindElement(By.TagName("h5"));
        
         public AssessmentPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
@@ -87,6 +88,11 @@ namespace PageObjectModels.POM
             var allertM = _seleniumDriver.SwitchTo().Alert();
             return allertM.ToString();
 
+        }
+
+        public string BadRequest()
+        {
+            return errorMessage.Text;
         }
     }
 }
