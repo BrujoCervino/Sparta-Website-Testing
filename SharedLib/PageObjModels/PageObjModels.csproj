@@ -76,6 +76,7 @@
     <Compile Include="POM\LoginPage.cs" />
     <Compile Include="POM\PollsPage.cs" />
     <Compile Include="POM\ResultsPage.cs" />
+    <Compile Include="POM\TablePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpartaWebsite.cs" />
     <Compile Include="SuperPage.cs" />

@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using PageObjectModels;
+using SharedTestTools;
 using System.Collections.Generic;
 
 namespace DispatchesTests
@@ -14,7 +15,6 @@ namespace DispatchesTests
         public void Setup()
         {
             _website = new SpartaWebsite("chrome", _sleepTime, _sleepTime);
-            _website.loginPage.MaximisePage();
         }
 
         [Test]
@@ -39,6 +39,18 @@ namespace DispatchesTests
             IWebElement TestId = _website.SeleniumDriver.FindElement(By.CssSelector($"body > div > table > thead > tr > th:nth-child({index})"));
 
             Assert.That(TestId.Text, Is.EqualTo(headerName));
+        }
+
+        [Test]
+        public void ChecktableData()
+        {
+            TestTools.Login(_website);
+
+            _website.pollsPage.Visit();
+
+            List<List<string>> pollsData = _website.pollsPage.GetTabelData(100);
+
+            Assert.That(pollsData[0][0], Is.EqualTo("August 3rd 2020, 10:50 am"));
         }
 
         //[Test]

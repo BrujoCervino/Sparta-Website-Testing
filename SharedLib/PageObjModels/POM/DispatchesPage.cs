@@ -5,8 +5,10 @@ using System.Linq;
 
 namespace PageObjectModels.POM
 {
-    public class DispatchesPage : SuperPage
+    public class DispatchesPage : TablePage
     {
+        private IWebElement tableBody => _seleniumDriver.FindElement(By.CssSelector(".table > tbody:nth-child(2)"));
+
         public List<DispatchesKeyValues> dispatchesList = new List<DispatchesKeyValues>();
         public ReadOnlyCollection<IWebElement> thElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr th"));
         public ReadOnlyCollection<IWebElement> tdElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr td"));
@@ -25,7 +27,7 @@ namespace PageObjectModels.POM
             for (int i = 0; i < thElements.Count; i++)
             {
                 dispatchesList.Add(
-                    new DispatchesKeyValues(   
+                    new DispatchesKeyValues(
                         thElements[i].Text,
                         splitTds[i][0].Text,
                         splitTds[i][1].Text,
@@ -38,5 +40,7 @@ namespace PageObjectModels.POM
                 );
             }
         }
+
+        public List<List<string>> GetTabelData() => ConvertTable(tableBody);
     }
 }
