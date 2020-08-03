@@ -13,7 +13,7 @@ namespace PageObjectModels.POM
 
         public PollsPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
-            _url = PagesConfigReader.PollsUrl;
+            _url = PagesConfigReader.PollsUrl; 
         }
 
         public void GetTableContent()

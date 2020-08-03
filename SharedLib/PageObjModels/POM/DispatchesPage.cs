@@ -25,7 +25,7 @@ namespace PageObjectModels.POM
             for (int i = 0; i < thElements.Count; i++)
             {
                 dispatchesList.Add(
-                    new DispatchesKeyValues(
+                    new DispatchesKeyValues(   
                         thElements[i].Text,
                         splitTds[i][0].Text,
                         splitTds[i][1].Text,
