@@ -58,9 +58,9 @@ namespace PageObjectModels.POM
             psychometriccheckbox.Click();
         }
 
-        public void SelectAssessment(string cource)
+        public void SelectAssessment(string course)
         {
-           asessmentDropDown.SelectByValue(cource);
+           asessmentDropDown.SelectByValue(course);
         }
 
         public void GotoDispatch()
@@ -87,7 +87,6 @@ namespace PageObjectModels.POM
         {
             var allertM = _seleniumDriver.SwitchTo().Alert();
             return allertM.ToString();
-
         }
 
         public string BadRequest()

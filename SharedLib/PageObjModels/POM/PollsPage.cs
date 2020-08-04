@@ -36,7 +36,7 @@ namespace PageObjectModels.POM
                 );
             }
         }
-        public List<List<string>> GetTabelData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
+        public List<List<string>> GetTableData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
 
         public List<string> GetTableHeaders() => ConvertTableHeaders(tableHeaderRow);
     }

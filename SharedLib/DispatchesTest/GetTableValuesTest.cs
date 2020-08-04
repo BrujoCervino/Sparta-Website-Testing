@@ -21,7 +21,7 @@ namespace DispatchesTests
         { // Fragile test, Will have to look further into it when further
             TestTools.Login(_website);
             _website.dispatchesPage.Visit();
-            List<List<string>> dispatchesData = _website.dispatchesPage.GetTabelData();
+            List<List<string>> dispatchesData = _website.dispatchesPage.GetTableData();
 
             Assert.That(dispatchesData[0][0], Is.EqualTo("shwetha ashwathappa"));
         }
