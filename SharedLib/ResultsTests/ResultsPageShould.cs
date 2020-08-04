@@ -27,7 +27,7 @@ namespace ResultsTests
             TestTools.Login(spartaWebsite);
 
             spartaWebsite.resultsPage.Visit();
-            spartaWebsite.resultsPage.UpdateButton.Click();
+            spartaWebsite.resultsPage.ClickUpdatebutton();
             // Assert
             Assert.That(spartaWebsite.SeleniumDriver.Url, Is.EqualTo(PagesConfigReader.PollsUrl));
         }
