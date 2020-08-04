@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using PageObjectModels;
+using System;
 using System.Collections.Generic;
 
 namespace PageObjectModels.POM
@@ -9,7 +10,7 @@ namespace PageObjectModels.POM
         public IWebElement UsernameBox => _seleniumDriver.FindElement(By.Name("username"));
         public IWebElement PasswordBox => _seleniumDriver.FindElement(By.Name("password"));
         public IWebElement SubmitButton => _seleniumDriver.FindElement(By.Name("submit"));
-        public IWebElement UpdateButton => _seleniumDriver.FindElement(By.TagName("button"));
+        private IWebElement UpdateButton => _seleniumDriver.FindElement(By.CssSelector("body > div > form > button"));
 
         private IWebElement psychometricTable => _seleniumDriver.FindElement(By.CssSelector("table.table:nth-child(4) > tbody:nth-child(2)"));
         private IWebElement javaTable => _seleniumDriver.FindElement(By.CssSelector("table.table:nth-child(6) > tbody:nth-child(2)"));
@@ -21,6 +22,9 @@ namespace PageObjectModels.POM
         private IWebElement javaTableHeaders => _seleniumDriver.FindElement(By.CssSelector("table.table:nth-child(6) > thead:nth-child(1) > tr:nth-child(1)"));
         private IWebElement pythonTableHeaders => _seleniumDriver.FindElement(By.CssSelector("table.table:nth-child(8) > thead:nth-child(1) > tr:nth-child(1)"));
         private IWebElement cSharpTableHeaders => _seleniumDriver.FindElement(By.CssSelector("table.table:nth-child(10) > thead:nth-child(1) > tr:nth-child(1)"));
+
+        public void ClickUpdatebutton() => UpdateButton.Click();
+
         private IWebElement pythonLearningPathTableHeaders => _seleniumDriver.FindElement(By.CssSelector("table.table:nth-child(12) > thead:nth-child(1) > tr:nth-child(1)"));
 
         public ResultsPage(IWebDriver seleniumDriver) : base(seleniumDriver)

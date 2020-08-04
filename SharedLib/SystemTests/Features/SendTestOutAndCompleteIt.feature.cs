@@ -113,6 +113,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I go to the results page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
+ testRunner.And("The results have been updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
  testRunner.Then("there should be a new entry in the C# results table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

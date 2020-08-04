@@ -14,18 +14,39 @@ namespace PageObjModels
         public void DoTest()
         {
             codingGamePage.ClickstartButton();
-            SleepDriver(2);
+            SleepDriver(4);
             codingGamePage.ClickTOSCheckBox();
-            SleepDriver(2);
+            SleepDriver(4);
             codingGamePage.ClickbeginButton();
-
-            for (int i = 0; i < 4; i++)
-            {
-                SleepDriver(2);
-                codingGamePage.ClickRandomAnswer();
-                SleepDriver(2);
-                codingGamePage.ClicknextSubmitButton();
-            }
+            SleepDriver(4);
+            codingGamePage.Click1Question();
+            SleepDriver(4);
+            codingGamePage.ClickRandomAnswer();
+            SleepDriver(4);
+            codingGamePage.ClicknextSubmitButton();
+            SleepDriver(4);
+            codingGamePage.Click2Question();
+            SleepDriver(4);
+            codingGamePage.ClickRandomAnswer();
+            SleepDriver(4);
+            codingGamePage.ClicknextSubmitButton();
+            SleepDriver(4);
+            codingGamePage.Click3Question();
+            SleepDriver(4);
+            codingGamePage.ClickRandomAnswer();
+            SleepDriver(4);
+            codingGamePage.ClicknextSubmitButton();
+            SleepDriver(4);
+            codingGamePage.Click4Question();
+            SleepDriver(4);
+            codingGamePage.ClickRandomAnswer();
+            SleepDriver(4);
+            codingGamePage.ClicknextSubmitButton();
+            SleepDriver(4);
+            codingGamePage.ClickEndTest();
+            SleepDriver(4);
+            codingGamePage.ClickConfEnd();
+            SleepDriver(4);
         }
     }
 }

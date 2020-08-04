@@ -34,6 +34,7 @@ namespace SharedTestTools
             codingGameWebsite.codingGamePage.Visit();
 
             //do test here
+            codingGameWebsite.codingGamePage.MaximisePage();
             codingGameWebsite.DoTest();
 
             codingGameWebsite.Close();

@@ -37,7 +37,7 @@ namespace SystemTests.Steps
             _spartaWebsite.assessmentPage.EnterRecruiterEmail(email);
             _spartaWebsite.assessmentPage.ClickTitle();
             _spartaWebsite.assessmentPage.SubmitDetails();
-            
+
             _spartaWebsite.SleepDriver(5);
         }
 
@@ -53,12 +53,19 @@ namespace SystemTests.Steps
             _spartaWebsite.resultsPage.Visit();
         }
 
+        [When(@"The results have been updated")]
+        public void WhenTheResultsHaveBeenUpdated()
+        {
+            _spartaWebsite.resultsPage.ClickUpdatebutton();
+            _spartaWebsite.SleepDriver(10);
+            _spartaWebsite.resultsPage.Visit();
+        }
 
         [Then(@"there should be a new entry in the C\# results table")]
         public void ThenThereShouldBeANewEntryInTheCResultsTable()
         {
             List<List<string>> csharpResults = _spartaWebsite.resultsPage.GetCSharpResults();
-            Assert.That(csharpResults[0][0], Is.EqualTo("TestName"));
+            Assert.That(csharpResults[csharpResults.Count - 1][0], Is.EqualTo("TestName"));
         }
     }
 }
