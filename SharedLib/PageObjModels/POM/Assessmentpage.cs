@@ -19,7 +19,9 @@ namespace PageObjectModels.POM
         private IWebElement polls => _seleniumDriver.FindElement(By.CssSelector("[href *='/polls']"));
         private IWebElement logout => _seleniumDriver.FindElement(By.CssSelector("[href *='/logout']"));
         private IWebElement errorMessage => _seleniumDriver.FindElement(By.TagName("h5"));
-       
+        private IWebElement assessmentSent => _seleniumDriver.FindElement(By.TagName("h1"));
+
+
         public AssessmentPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
             _url = "https://uat.spartaglobal.academy/";
@@ -92,6 +94,11 @@ namespace PageObjectModels.POM
         public string BadRequest()
         {
             return errorMessage.Text;
+        }
+
+        public string Success()
+        {
+            return assessmentSent.Text;
         }
     }
 }
