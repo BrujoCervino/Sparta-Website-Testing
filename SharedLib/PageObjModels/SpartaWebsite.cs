@@ -1,36 +1,22 @@
-﻿using OpenQA.Selenium;
-using PageObjectModels.POM;
-using System;
-using System.Threading;
-using static PageObjectModels.Driver_Config.SeleniumDriverFactory;
+﻿using PageObjectModels.POM;
 
-namespace PageObjectModels
+namespace PageObjModels
 {
-    public class SpartaWebsite
+    public class SpartaWebsite : Website
     {
         public readonly AssessmentPage assessmentPage;
         public readonly ResultsPage resultsPage;
         public readonly LoginPage loginPage;
-        public readonly CodinGame codinGame;
         public readonly DispatchesPage dispatchesPage;
         public readonly PollsPage pollsPage;
-        public readonly IWebDriver SeleniumDriver;
 
-        public SpartaWebsite(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5)
-        {
-            SeleniumDriver = CreateDriver(driverName, pageLoadInSeconds, implicitWaitInSeconds);
+        public SpartaWebsite(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5) : base(driverName, pageLoadInSeconds, implicitWaitInSeconds)
+        {           
             assessmentPage = new AssessmentPage(SeleniumDriver);
             resultsPage = new ResultsPage(SeleniumDriver);
             loginPage = new LoginPage(SeleniumDriver);
-            codinGame = new CodinGame(SeleniumDriver);
             dispatchesPage = new DispatchesPage(SeleniumDriver);
             pollsPage = new PollsPage(SeleniumDriver);
         }
-
-        internal void SleepDriver(int sleepTime) => Thread.Sleep(TimeSpan.FromSeconds(sleepTime));
-
-        public void Close() => SeleniumDriver.Dispose();
-
-        public string GetUrl() => SeleniumDriver.Url;
     }
 }

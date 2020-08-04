@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITestTools", "APITestTool
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApiTests", "GoogleApiTests\GoogleApiTests.csproj", "{AC4A9957-8C47-48FE-A14D-896ECB502510}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTests", "SystemTests\SystemTests.csproj", "{F6BC0CF6-038E-4316-A82A-59588237749D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{AC4A9957-8C47-48FE-A14D-896ECB502510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC4A9957-8C47-48FE-A14D-896ECB502510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC4A9957-8C47-48FE-A14D-896ECB502510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6BC0CF6-038E-4316-A82A-59588237749D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BC0CF6-038E-4316-A82A-59588237749D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BC0CF6-038E-4316-A82A-59588237749D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BC0CF6-038E-4316-A82A-59588237749D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

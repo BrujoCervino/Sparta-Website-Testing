@@ -12,9 +12,9 @@ namespace PageObjectModels.POM
         private IReadOnlyCollection<IWebElement> answers => _seleniumDriver.FindElements(By.CssSelector("#root > div > div > div > div > div.Pane.vertical.Pane2 > div > div.c0185 > div > div.c0156 > div > div.c0160.c0161 > form"));
         private IWebElement nextSubmitButton => _seleniumDriver.FindElement(By.CssSelector("#root > div > div > div > div > div.Pane.vertical.Pane2 > div > div.c0185 > div > div.c0157 > button"));
 
-        public CodinGame(IWebDriver seleniumDriver) : base(seleniumDriver)
+        public CodinGame(IWebDriver seleniumDriver, string testUrl) : base(seleniumDriver)
         {
-            _url = "https://www.codingame.com/evaluate?id=393749715f1359743d428e4f90316c0b8b5d538";
+            _url = testUrl;
         }
 
         public void ClickstartButton() => startButton.Click();
@@ -33,6 +33,6 @@ namespace PageObjectModels.POM
             }
             lis[rnd.Next(lis.Count)].Click();
             lis.Clear();
-         }
+        }        
     }
 }

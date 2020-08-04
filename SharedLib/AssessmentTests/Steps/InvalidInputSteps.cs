@@ -1,8 +1,7 @@
 ﻿using NUnit.Framework;
-using PageObjectModels;
-using System;
-using TechTalk.SpecFlow;
+using PageObjModels;
 using SharedTestTools;
+using TechTalk.SpecFlow;
 
 namespace AssessmentTests.Steps
 {
