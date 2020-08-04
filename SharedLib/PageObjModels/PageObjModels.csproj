@@ -66,7 +66,7 @@
     <Compile Include="DispatchesKeyValues.cs" />
     <Compile Include="Driver_Config\SeleniumDriverConfig.cs" />
     <Compile Include="Driver_Config\SeleniumDriverFactory.cs" />
-    <Compile Include="IPage.cs" />
+    <Compile Include="POM\IPage.cs" />
     <Compile Include="LoginConfigReader.cs" />
     <Compile Include="PagesConfigReader.cs" />
     <Compile Include="PollsKeyValues.cs" />
@@ -79,7 +79,7 @@
     <Compile Include="POM\TablePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpartaWebsite.cs" />
-    <Compile Include="SuperPage.cs" />
+    <Compile Include="POM\SuperPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Config.json">
