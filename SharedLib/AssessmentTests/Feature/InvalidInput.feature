@@ -17,3 +17,22 @@ Scenario: valid candidate name but invalid recruiter email id
 		| test   | Recruiter email | Message                                                             |
 		| java   | ghg             | please include an '@' in the email address. 'ghg' is missing an '@' |
 		| csharp | ghg@            | please enter a following '@'. 'ghg@' is incomplete                  |
+
+@Assessment
+Scenario: Invalid Candidate name
+	Given I am in assessment page
+	And I have selected the <test> to send
+	And I have entered Invalid candidate name < name>
+	And I have valid the Candidate email 
+	And I have valid the Recruiter email 
+	And None of the text boxes are in focus
+	When I press the submit button
+	Then I shouldn't get a message Assessment Sent
+	Examples: 
+		| test   |  name                          |
+		| java   | testproject.dummy456@gmail.com |
+		| csharp | 123456                         |
+		| csharp | £$%^&*                         |
+		| python | +_+~}                          |
+
+

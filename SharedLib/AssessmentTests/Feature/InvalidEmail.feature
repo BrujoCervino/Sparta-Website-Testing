@@ -10,6 +10,7 @@ Scenario: Invalid recruiter email
 	And I have entered  valid candidate name
 	And I have valid the Candidate email 
 	And I have Invalid the Recruiter email <Recruiter email> 
+	And None of the text boxes are in focus
 	When I press the submit button
 	Then i should be shown an error message <Message>
 
@@ -25,6 +26,7 @@ Scenario: Invalid Candidate email
 	And I have entered  valid candidate name
 	And I have Invalid the Candidate email <Candidate email> 
 	And I have valid the Recruiter email 
+	And None of the text boxes are in focus
 	When I press the submit button
 	Then i should be shown an error message <Message>
 
