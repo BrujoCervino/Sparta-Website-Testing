@@ -37,7 +37,7 @@ namespace DispatchesTests.Steps
         [Given(@"the assessment dropdown has CSharp selected")]
         public void GivenTheAssessmentDropdownHasCSharpSelected()
         {
-            _website.assessmentPage.SelectAssessment("C# Assessment");
+            _website.assessmentPage.SelectAssessment("csharp");
         }
 
         [Given(@"""(.*)"" is entered as a candidate name")]
@@ -89,19 +89,23 @@ namespace DispatchesTests.Steps
         [Then(@"The dispatches table should have a new entry in it with the following data:")]
         public void ThenTheDispatchesTableShouldHaveANewEntryInItWithTheFollowingData(Table table)
         {
-            List<string> dispatchRow = _website.dispatchesPage.GetTabelData()[0];
-            Assert.That(dispatchRow[0], Is.EqualTo(table.Rows[0].Values.ToList()[1]));
-            Assert.That(dispatchRow[1], Is.EqualTo(table.Rows[1].Values.ToList()[1]));
-            Assert.That(dispatchRow[2], Is.EqualTo(table.Rows[2].Values.ToList()[1]));
-            Assert.That(dispatchRow[3], Is.EqualTo(table.Rows[3].Values.ToList()[1]));
-            Assert.That(dispatchRow[6], Is.EqualTo(table.Rows[4].Values.ToList()[1]));
-            Assert.That(dispatchRow[7], Is.EqualTo(table.Rows[5].Values.ToList()[1]));
+            Dictionary<string, string> tableData = new Dictionary<string, string>
+            {
+                {table.Rows[0].Values.ToList()[0], table.Rows[0].Values.ToList()[1]},
+                {table.Rows[1].Values.ToList()[0], table.Rows[1].Values.ToList()[1]},
+                {table.Rows[2].Values.ToList()[0], table.Rows[2].Values.ToList()[1]},
+                {table.Rows[3].Values.ToList()[0], table.Rows[3].Values.ToList()[1]},
+                {table.Rows[4].Values.ToList()[0], table.Rows[4].Values.ToList()[1]},
+                {table.Rows[5].Values.ToList()[0], table.Rows[5].Values.ToList()[1]}
+            };
+
+            Assert.That(_website.dispatchesPage.CompareFirstRowData(tableData));
         }
 
         [Then(@"The top two rows should have the name ""(.*)""")]
         public void ThenTheTopTwoRowsShouldHaveTheName(string name)
         {
-            List<List<string>> data = _website.dispatchesPage.GetTabelData(2);
+            List<List<string>> data = _website.dispatchesPage.GetTableData(2);
 
             Assert.That(name, Is.EqualTo(data[0][0]).And.EqualTo(data[1][0]));
         }

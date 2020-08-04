@@ -48,7 +48,7 @@ namespace DispatchesTests
 
             _website.pollsPage.Visit();
 
-            List<List<string>> pollsData = _website.pollsPage.GetTabelData(100);
+            List<List<string>> pollsData = _website.pollsPage.GetTableData(100);
 
             Assert.That(pollsData[0][0], Is.EqualTo("August 3rd 2020, 10:50 am"));
         }
