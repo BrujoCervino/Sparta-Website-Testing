@@ -8,6 +8,7 @@ namespace PageObjectModels.POM
     public class DispatchesPage : TablePage
     {
         private IWebElement tableBody => _seleniumDriver.FindElement(By.CssSelector(".table > tbody:nth-child(2)"));
+        private IWebElement tableHeaderRow => _seleniumDriver.FindElement(By.CssSelector(".thead-dark > tr:nth-child(1)"));
 
         public List<DispatchesKeyValues> dispatchesList = new List<DispatchesKeyValues>();
         public ReadOnlyCollection<IWebElement> thElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr th"));
@@ -42,6 +43,7 @@ namespace PageObjectModels.POM
         }
 
         public List<List<string>> GetTabelData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
+        public List<string> GetTableHeaders() => ConvertTableHeaders(tableHeaderRow);
 
         public bool CheckTestsSentOut(List<string> testNames, int numOfRowsToCompare)
         {

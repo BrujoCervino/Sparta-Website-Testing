@@ -11,6 +11,7 @@ namespace PageObjectModels.POM
         public ReadOnlyCollection<IWebElement> thElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr th"));
         public ReadOnlyCollection<IWebElement> tdElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr td"));
         private IWebElement tableBody => _seleniumDriver.FindElement(By.CssSelector(".table > tbody:nth-child(2)"));
+        private IWebElement tableHeaderRow => _seleniumDriver.FindElement(By.CssSelector("html body div.container-fluid table.table thead.thead-dark tr.d-flex"));
 
         public PollsPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
@@ -36,5 +37,7 @@ namespace PageObjectModels.POM
             }
         }
         public List<List<string>> GetTabelData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
+
+        public List<string> GetTableHeaders() => ConvertTableHeaders(tableHeaderRow);
     }
 }
