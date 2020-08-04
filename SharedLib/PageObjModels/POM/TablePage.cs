@@ -33,5 +33,17 @@ namespace PageObjectModels.POM
             }
             return output;
         }
+
+        protected List<string> ConvertTableHeaders(IWebElement TableHeaderRow)
+        {
+            List<string> output = new List<string>();
+
+            foreach(IWebElement header in TableHeaderRow.FindElements(By.TagName("th")))
+            {
+                output.Add(header.Text);
+            }
+
+            return output;
+        }
     }
 }

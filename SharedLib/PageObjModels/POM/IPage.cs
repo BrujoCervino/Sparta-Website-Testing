@@ -5,5 +5,8 @@
         void Visit();
         void MaximisePage();
         string GetCurrentUrl();
+        string GetPageTitle();
+        void ClickLogo();
+        void ClickTitle();
     }
 }

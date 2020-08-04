@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace PageObjectModels.POM
     public class DispatchesPage : TablePage
     {
         private IWebElement tableBody => _seleniumDriver.FindElement(By.CssSelector(".table > tbody:nth-child(2)"));
+        private IWebElement tableHeaderRow => _seleniumDriver.FindElement(By.CssSelector(".thead-dark > tr:nth-child(1)"));
 
         public List<DispatchesKeyValues> dispatchesList = new List<DispatchesKeyValues>();
         public ReadOnlyCollection<IWebElement> thElements => _seleniumDriver.FindElements(By.CssSelector("tbody tr th"));
@@ -41,12 +43,13 @@ namespace PageObjectModels.POM
             }
         }
 
-        public List<List<string>> GetTabelData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
+        public List<List<string>> GetTableData(int numOfRows = -1) => ConvertTable(tableBody, numOfRows);
+        public List<string> GetTableHeaders() => ConvertTableHeaders(tableHeaderRow);
 
         public bool CheckTestsSentOut(List<string> testNames, int numOfRowsToCompare)
         {
             List<string> testsInTable = new List<string>();
-            foreach (List<string> row in GetTabelData(numOfRowsToCompare))
+            foreach (List<string> row in GetTableData(numOfRowsToCompare))
             {
                 testsInTable.Add(row[3]);
             }
@@ -56,6 +59,20 @@ namespace PageObjectModels.POM
                 if (!testsInTable.Contains(name))
                     return false;
             }
+            return true;
+        }
+
+        public bool CompareFirstRowData(Dictionary<string, string> tableData)
+        {
+            List<string> headers = GetTableHeaders();
+            List<string> dispatchRow = GetTableData()[0];
+
+            foreach (KeyValuePair<string, string> pair in tableData)
+            {
+                if (pair.Value != dispatchRow[headers.IndexOf(pair.Key)])
+                    return false;
+            }
+
             return true;
         }
     }

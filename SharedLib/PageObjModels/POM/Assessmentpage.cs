@@ -1,5 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Linq;
+using System.Threading;
 
 namespace PageObjectModels.POM
 {
@@ -15,6 +18,7 @@ namespace PageObjectModels.POM
         private IWebElement results => _seleniumDriver.FindElement(By.CssSelector("[href *='/results']"));
         private IWebElement polls => _seleniumDriver.FindElement(By.CssSelector("[href *='/polls']"));
         private IWebElement logout => _seleniumDriver.FindElement(By.CssSelector("[href *='/logout']"));
+        private IWebElement errorMessage => _seleniumDriver.FindElement(By.TagName("h5"));
        
         public AssessmentPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
@@ -31,24 +35,32 @@ namespace PageObjectModels.POM
         {
             candidateEmail.Clear();
             candidateEmail.SendKeys(cEmail);
+            Thread.Sleep(3000);
+
         }
 
         public void EnterRecruiterEmail(string rEmail)
         {
             recruiterEmail.Clear();
             recruiterEmail.SendKeys(rEmail);
+            Thread.Sleep(10000);
+
         }
 
-        public void SubmitDetails() => submitButton.Click();
+        public void SubmitDetails()
+        {
+            
+            submitButton.Click();
+        }
 
         public void SendPsychometric()
         {
             psychometriccheckbox.Click();
         }
 
-        public void SelectAssessment(string cource)
+        public void SelectAssessment(string course)
         {
-            asessmentDropDown.SelectByText(cource);
+           asessmentDropDown.SelectByValue(course);
         }
 
         public void GotoDispatch()
@@ -69,6 +81,17 @@ namespace PageObjectModels.POM
         public void Logout()
         {
             logout.Click();
+        }
+
+        public string CaptureAlertMessage()
+        {
+            var allertM = _seleniumDriver.SwitchTo().Alert();
+            return allertM.ToString();
+        }
+
+        public string BadRequest()
+        {
+            return errorMessage.Text;
         }
     }
 }

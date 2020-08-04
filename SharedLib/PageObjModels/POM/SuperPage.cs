@@ -15,16 +15,8 @@ namespace PageObjectModels
             _seleniumDriver = seleniumDriver;
         }
 
-        public void Visit()
-        {
-            _seleniumDriver.Navigate().GoToUrl(_url);
-        }
-
-        public void MaximisePage()
-        {
-            _seleniumDriver.Manage().Window.Maximize();
-        }
-
+        public void Visit() => _seleniumDriver.Navigate().GoToUrl(_url);
+        public void MaximisePage() => _seleniumDriver.Manage().Window.Maximize();
         public string GetCurrentUrl() => _seleniumDriver.Url;
         public string GetPageTitle() => pageTitle.Text;
         public void ClickLogo() => spartaLogo.Click();

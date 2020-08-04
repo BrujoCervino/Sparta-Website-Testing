@@ -34,6 +34,7 @@ namespace APITestTools.SpartaAPI
             json_delete_sparta = JsonConvert.DeserializeObject<JObject>(spartaDeleteData);
         }
     }
+
     internal class test
     {
         [Test]
@@ -45,4 +46,5 @@ namespace APITestTools.SpartaAPI
         }
 
     }
+
 }
