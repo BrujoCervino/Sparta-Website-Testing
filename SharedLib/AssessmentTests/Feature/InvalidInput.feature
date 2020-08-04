@@ -39,12 +39,12 @@ Scenario: Invalid Candidate name
 Scenario: Matching Candidate and Recruiter Email
 	Given I am in assessment page
 	And I have selected the <test> to send
-	And I have entered Invalid candidate name < name>
+	And I have entered  valid candidate name
 	And I have Invalid the Candidate email <Candidate email> 
 	And I have Invalid the Recruiter email <Recruiter email>
 	And None of the text boxes are in focus
 	When I press the submit button
 	Then I shouldn't get a message Assessment Sent
 	Examples: 
-		| Candidate email                | Candidate email                |
-		| testproject.dummy456@gmail.com | testproject.dummy456@gmail.com |
+		| test  | Candidate email                | Recruiter email                |
+		| java  | testproject.dummy456@gmail.com | testproject.dummy456@gmail.com |
