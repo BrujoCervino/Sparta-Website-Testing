@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using PageObjectModels;
+using SharedTestTools;
 using System;
 using System.Threading;
 
@@ -30,6 +31,18 @@ namespace ResultsTests
             spartaWebsite.resultsPage.UpdateButton.Click();
             // Assert
             Assert.That(spartaWebsite.SeleniumDriver.Url, Is.EqualTo(PagesConfigReader.PollsUrl));
+        }
+
+        [Test]
+        public void CanAccessResultsTable()
+        {
+            // Arrange, act
+            spartaWebsite = new SpartaWebsite("chrome");
+            TestTools.Login(spartaWebsite);
+            spartaWebsite.resultsPage.Visit();
+
+            // Assert
+            Assert.That(spartaWebsite.resultsPage.GetPsychometricResults().Count, Is.GreaterThanOrEqualTo(1));
         }
 
         [TearDown]
