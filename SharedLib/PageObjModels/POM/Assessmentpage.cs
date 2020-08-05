@@ -1,8 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Linq;
-using System.Threading;
 
 namespace PageObjectModels.POM
 {
@@ -37,7 +34,6 @@ namespace PageObjectModels.POM
         {
             candidateEmail.Clear();
             candidateEmail.SendKeys(cEmail);
-            Thread.Sleep(3000);
 
         }
 
@@ -45,13 +41,10 @@ namespace PageObjectModels.POM
         {
             recruiterEmail.Clear();
             recruiterEmail.SendKeys(rEmail);
-            Thread.Sleep(10000);
-
         }
 
         public void SubmitDetails()
-        {
-            
+        { 
             submitButton.Click();
         }
 
