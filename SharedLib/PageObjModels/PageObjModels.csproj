@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserConfigReader.cs" />
-    <Compile Include="CondingGameWebsite.cs" />
+    <Compile Include="Website\CodinGameWebsite.cs" />
     <Compile Include="ConfigModel.cs" />
     <Compile Include="ConfigReader.cs" />
     <Compile Include="DispatchesKeyValues.cs" />
@@ -79,9 +79,9 @@
     <Compile Include="POM\ResultsPage.cs" />
     <Compile Include="POM\TablePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpartaWebsite.cs" />
+    <Compile Include="Website\SpartaWebsite.cs" />
     <Compile Include="POM\SuperPage.cs" />
-    <Compile Include="Website.cs" />
+    <Compile Include="Website\Website.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Config.json">

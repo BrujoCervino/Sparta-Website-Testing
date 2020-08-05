@@ -11,8 +11,9 @@ namespace SystemTests.Steps
     public class SendTestOutAndCompleteItSteps
     {
         private SpartaWebsite _spartaWebsite;
-        private int oldNumOfResults;
+        private int oldNumOfResults, sleepTime = 5;
 
+        #region Setup/Teardown
         [BeforeScenario]
         public void BeforeScenario()
         {
@@ -24,24 +25,28 @@ namespace SystemTests.Steps
         {
             _spartaWebsite.Close();
         }
+        #endregion
 
-        [Given(@"A ""(.*)"" test has been sent out to ""(.*)""")]
-        public void GivenATestHasBeenSentOutTo(string testType, string email)
+        #region Arange
+        [Given(@"""(.*)"" has been sent a ""(.*)"" test to ""(.*)""")]
+        public void GivenHasBeenSentATestTo(string name, string testType, string email)
         {
             TestTools.Login(_spartaWebsite);
 
             _spartaWebsite.assessmentPage.Visit();
 
             _spartaWebsite.assessmentPage.SelectAssessment(testType);
-            _spartaWebsite.assessmentPage.EnterCandidateName("TestName");
+            _spartaWebsite.assessmentPage.EnterCandidateName(name);
             _spartaWebsite.assessmentPage.EnterCandidateEmail(email);
             _spartaWebsite.assessmentPage.EnterRecruiterEmail(email);
             _spartaWebsite.assessmentPage.ClickTitle();
             _spartaWebsite.assessmentPage.SubmitDetails();
 
-            _spartaWebsite.SleepDriver(5);
+            _spartaWebsite.SleepDriver(sleepTime);
         }
+        #endregion
 
+        #region Act
         [When(@"the test has been completed")]
         public void WhenTheTestHasBeenCompleted()
         {
@@ -60,16 +65,25 @@ namespace SystemTests.Steps
             oldNumOfResults = _spartaWebsite.resultsPage.GetCSharpResults().Count;
 
             _spartaWebsite.resultsPage.ClickUpdatebutton();
-            _spartaWebsite.SleepDriver(10);
+            _spartaWebsite.SleepDriver(sleepTime);
             _spartaWebsite.resultsPage.Visit();
         }
+        #endregion
 
-        [Then(@"there should be a new entry in the C\# results table")]
-        public void ThenThereShouldBeANewEntryInTheCResultsTable()
+        #region Assert
+        [Then(@"""(.*)"" should bave a new entry in the C\# results table")]
+        public void ThenShouldBaveANewEntryInTheCResultsTable(string name)
         {
             List<List<string>> csharpResults = _spartaWebsite.resultsPage.GetCSharpResults();
-            Assert.That(csharpResults[csharpResults.Count - 1][0], Is.EqualTo("TestName"));
-            Assert.That(csharpResults.Count, Is.EqualTo(oldNumOfResults + 1)); 
+            Assert.That(csharpResults[csharpResults.Count - 1][0], Is.EqualTo(name));
         }
+
+        [Then(@"the C\# results count has increased by one")]
+        public void ThenTheCResultsCountHasIncreasedByOne()
+        {
+            List<List<string>> csharpResults = _spartaWebsite.resultsPage.GetCSharpResults();
+            Assert.That(csharpResults.Count, Is.EqualTo(oldNumOfResults + 1));
+        }
+        #endregion
     }
 }

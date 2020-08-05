@@ -30,14 +30,14 @@ namespace SharedTestTools
             string url = apiManager.GetEmailUrl();
 
             //go to url
-            CondingGameWebsite codingGameWebsite = new CondingGameWebsite(browser, url);
-            codingGameWebsite.codingGamePage.Visit();
+            CodinGameWebsite codinGameWebsite = new CodinGameWebsite(browser, url);
+            codinGameWebsite.codinGamePage.Visit();
 
             //do test here
-            codingGameWebsite.codingGamePage.MaximisePage();
-            codingGameWebsite.DoTest();
+            codinGameWebsite.codinGamePage.MaximisePage();
+            codinGameWebsite.DoTest();
 
-            codingGameWebsite.Close();
+            codinGameWebsite.Close();
         }
     }
 }

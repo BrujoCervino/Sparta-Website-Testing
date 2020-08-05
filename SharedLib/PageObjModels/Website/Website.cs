@@ -5,7 +5,7 @@ using static PageObjectModels.Driver_Config.SeleniumDriverFactory;
 
 namespace PageObjModels
 {
-    public class Website
+    public abstract class Website
     {
         public readonly IWebDriver SeleniumDriver;
 

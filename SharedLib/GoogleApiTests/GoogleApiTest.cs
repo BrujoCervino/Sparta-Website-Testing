@@ -14,8 +14,8 @@ namespace GoogleApiTests
             string url = apiManager.GetEmailUrl();
 
             //go to url
-            CondingGameWebsite codingGameWebsite = new CondingGameWebsite("chrome", url);
-            codingGameWebsite.codingGamePage.Visit();
+            CodinGameWebsite codingGameWebsite = new CodinGameWebsite("chrome", url);
+            codingGameWebsite.codinGamePage.Visit();
 
             Assert.That(codingGameWebsite.GetUrl(), Does.StartWith("https://www.codingame.com/evaluate/"));
 

@@ -35,8 +35,8 @@ namespace SystemTests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SendTestOutAndCompleteIt", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SendTestOutAndCompleteIt", "\tIn order to get the results from a sent out test\r\n\tAs a sparta recruiter\r\n\tI wan" +
+                    "t to see the new results of the test that I have been completed", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,11 +76,11 @@ namespace SystemTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Complete a sent out test")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("EndToEnd")]
         public virtual void CompleteASentOutTest()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "EndToEnd"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete a sent out test", null, tagsOfScenario, argumentsOfScenario);
 #line 7
@@ -104,7 +104,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given("A \"csharp\" test has been sent out to \"testproject.dummy456@gmail.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("\"Bob McCtestyface\" has been sent a \"csharp\" test to \"testproject.dummy456@gmail.c" +
+                        "om\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
  testRunner.When("the test has been completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -116,7 +117,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("The results have been updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then("there should be a new entry in the C# results table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("\"Bob McCtestyface\" should bave a new entry in the C# results table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 13
+ testRunner.And("the C# results count has increased by one", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
