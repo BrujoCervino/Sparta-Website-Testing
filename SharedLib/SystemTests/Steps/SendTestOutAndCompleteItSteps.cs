@@ -11,6 +11,7 @@ namespace SystemTests.Steps
     public class SendTestOutAndCompleteItSteps
     {
         private SpartaWebsite _spartaWebsite;
+        private int oldNumOfResults;
 
         [BeforeScenario]
         public void BeforeScenario()
@@ -56,6 +57,8 @@ namespace SystemTests.Steps
         [When(@"The results have been updated")]
         public void WhenTheResultsHaveBeenUpdated()
         {
+            oldNumOfResults = _spartaWebsite.resultsPage.GetCSharpResults().Count;
+
             _spartaWebsite.resultsPage.ClickUpdatebutton();
             _spartaWebsite.SleepDriver(10);
             _spartaWebsite.resultsPage.Visit();
@@ -66,6 +69,7 @@ namespace SystemTests.Steps
         {
             List<List<string>> csharpResults = _spartaWebsite.resultsPage.GetCSharpResults();
             Assert.That(csharpResults[csharpResults.Count - 1][0], Is.EqualTo("TestName"));
+            Assert.That(csharpResults.Count, Is.EqualTo(oldNumOfResults + 1)); 
         }
     }
 }
