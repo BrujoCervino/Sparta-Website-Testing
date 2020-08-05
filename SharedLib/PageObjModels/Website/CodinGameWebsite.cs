@@ -1,4 +1,5 @@
 ﻿using PageObjectModels.POM;
+using System;
 
 namespace PageObjModels
 {
@@ -35,6 +36,18 @@ namespace PageObjModels
             codinGamePage.ClickEndTest();
             SleepDriver(sleepTime);
             codinGamePage.ClickConfEnd();
+            SleepDriver(sleepTime);
+        }
+
+        public void StatTest()
+        {
+            const int sleepTime = 4;
+
+            codinGamePage.ClickstartButton();
+            SleepDriver(sleepTime);
+            codinGamePage.ClickTOSCheckBox();
+            SleepDriver(sleepTime);
+            codinGamePage.ClickbeginButton();
             SleepDriver(sleepTime);
         }
     }

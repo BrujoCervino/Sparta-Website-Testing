@@ -23,6 +23,7 @@ namespace SharedTestTools
             website.loginPage.SubmitLoginInfo();
         }
 
+
         public static void DoCodingGameTest(string browser)
         {
             //get test url
@@ -35,9 +36,29 @@ namespace SharedTestTools
 
             //do test here
             codinGameWebsite.codinGamePage.MaximisePage();
+
             codinGameWebsite.DoTest();
 
             codinGameWebsite.Close();
+        }
+
+        public static void StartCodingTest(string browser)
+        {
+            //get test url
+            GmailAPIManager apiManager = new GmailAPIManager();
+            string url = apiManager.GetEmailUrl();
+
+            //go to url
+            CodinGameWebsite codinGameWebsite = new CodinGameWebsite(browser, url);
+            codinGameWebsite.codinGamePage.Visit();
+
+            //do test here
+            codinGameWebsite.codinGamePage.MaximisePage();
+
+            codinGameWebsite.StatTest();
+
+            codinGameWebsite.Close();
+
         }
     }
 }
