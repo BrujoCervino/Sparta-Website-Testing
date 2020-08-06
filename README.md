@@ -90,8 +90,8 @@ In order to not leak private company data, this project uses JSON serialisation 
 |***loginDetails***|username|The username for the desired account to log into (admin for this project)|
 |***loginDetails***|password|The username for the desired account to log into (admin for this project)|
 |***browserLocations***|none|Locations of browsers (and drivers for some browsers)|
-|***browserLocations***|firefox|The path of the firefox browser executable|
-|***browserLocations***|chrome|The path for the chrome driver executable|
+|***browserLocations***|firefox|The path of the Firefox *browser* executable|
+|***browserLocations***|chrome|The path for the Chrome Selenium *driver* executable|
 
 Workflow for Config.json:
 
@@ -108,7 +108,7 @@ Workflow for Config.json:
 ### Projects
 
 |Name|Purpose|Class diagram¹|
-|-|-|
+|-|-|-|
 |***APITestTools***|Library code for both the Gmail and Dispatches APIs|[<img src="DocsImg/APITestTools_CD.png" alt="APITestTools class diagram" width="512"/>]("APITestTools/APITestTools.cd")|                                             
 |***AssessmentTests***|Tests for Assessment POM||                                                                      
 |***DispatchesTests***|Tests for Dispatches POM||                                                                      
