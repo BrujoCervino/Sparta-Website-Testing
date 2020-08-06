@@ -11,13 +11,13 @@ namespace SystemTests.Steps
     public class SendTestOutAndCompleteItSteps
     {
         private SpartaWebsite _spartaWebsite;
-        private int oldNumOfResults, sleepTime = 5;
+        private int oldNumOfResults, sleepTime = 7;
 
         #region Setup/Teardown
         [BeforeScenario]
         public void BeforeScenario()
         {
-            _spartaWebsite = new SpartaWebsite("chrome");
+            _spartaWebsite = new SpartaWebsite("chrome", 10,10);
         }
 
         [AfterScenario]
@@ -44,6 +44,7 @@ namespace SystemTests.Steps
 
             _spartaWebsite.SleepDriver(sleepTime);
         }
+
         #endregion
 
         #region Act
@@ -68,6 +69,24 @@ namespace SystemTests.Steps
             _spartaWebsite.SleepDriver(sleepTime);
             _spartaWebsite.resultsPage.Visit();
         }
+
+        [When(@"I go to Dispatches page")]
+        public void WhenIGoToDispatchesPage()
+        {
+            _spartaWebsite.dispatchesPage.Visit();
+        }
+
+        [When(@"the test has been started")]
+        public void WhenTheTestHasBeenStarted()
+        {
+            TestTools.StartCodingTest("chrome");
+        }
+
+        [When(@"I go to Polls page")]
+        public void WhenIGoToPollsPage()
+        {
+            _spartaWebsite.pollsPage.Visit();
+        }
         #endregion
 
         #region Assert
@@ -84,6 +103,28 @@ namespace SystemTests.Steps
             List<List<string>> csharpResults = _spartaWebsite.resultsPage.GetCSharpResults();
             Assert.That(csharpResults.Count, Is.EqualTo(oldNumOfResults + 1));
         }
+
+
+        [Then(@"""(.*)"" status under complete should be dislayed as ""(.*)""")]
+        public void ThenStatusUnderCompleteShouldBeDislayedAs(string name, string status)
+        {
+            List<List<string>> data = _spartaWebsite.dispatchesPage.GetTableData(1);
+            Assert.That(name, Is.EqualTo(data[0][0]));
+            Assert.That(status, Is.EqualTo(data[0][6]));
+        }
+
+        [Then(@"Status of the matching test id is ""(.*)""")]
+        public void ThenStatusOfTheMatchingTestIdIs(string status)
+        {
+            _spartaWebsite.dispatchesPage.Visit();
+            List<List<string>> dispatchdata = _spartaWebsite.dispatchesPage.GetTableData(1);
+            _spartaWebsite.pollsPage.Visit();
+            List<List<string>> pollsdata = _spartaWebsite.pollsPage.GetTableData(1);
+            Assert.That(dispatchdata[0][4], Is.EqualTo(pollsdata[0][3]));
+            Assert.That(status, Is.EqualTo(pollsdata[0][1]));
+
+        }
+
         #endregion
     }
 }
