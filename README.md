@@ -9,9 +9,7 @@
 **Timeframe**: Mon: Jul-27-2020 - Fri: Aug-7-2020 (2 weeks)
 <br/><br/>
 
-### 1 - Goals and Definition of Done<br/><br/>
-
-### 2 - Sprint Breakdown and Reviews<br/><br/>
+### Sprint Breakdown and Reviews<br/><br/>
 
 We planned to have more sprints, but the product owner suggested only 2-- Sprint 1 was planning, Sprint 2 was implementation & execution.
 
@@ -19,8 +17,6 @@ We planned to have more sprints, but the product owner suggested only 2-- Sprint
 |-|-|
 |***Sprint 1 -<br/> Planning***|Mon:Jul-27, Noon<br/> -<br/> Wed:Jul-29, 5PM| 
 |***Sprint 2 -<br/> Implementation & Execution***|Thu:Jul-30, 9AM - Fri:Aug-7,11AM|
-
-### 3 - Sprint And Project Retrospectives<br/><br/>
 
 ## Code
 
@@ -90,8 +86,8 @@ In order to not leak private company data, this project uses JSON serialisation 
 |***loginDetails***|username|The username for the desired account to log into (admin for this project)|
 |***loginDetails***|password|The username for the desired account to log into (admin for this project)|
 |***browserLocations***|none|Locations of browsers (and drivers for some browsers)|
-|***browserLocations***|firefox|The path of the firefox browser executable|
-|***browserLocations***|chrome|The path for the chrome driver executable|
+|***browserLocations***|firefox|The path of the Firefox *browser* executable|
+|***browserLocations***|chrome|The path for the Chrome Selenium *driver* executable|
 
 Workflow for Config.json:
 
@@ -105,26 +101,28 @@ Workflow for Config.json:
 
 ### Bugs
 
+[See presentation ✨📚](https://protect-eu.mimecast.com/s/l1w3C9DAQfOzMQtoIb2H?domain=testingcircle-my.sharepoint.com)
+
 ### Projects
 
 |Name|Purpose|Class diagram¹|
-|-|-|
+|-|-|-|
 |***APITestTools***|Library code for both the Gmail and Dispatches APIs|[<img src="DocsImg/APITestTools_CD.png" alt="APITestTools class diagram" width="512"/>]("APITestTools/APITestTools.cd")|                                             
-|***AssessmentTests***|Tests for Assessment POM|                                                                      
-|***DispatchesTests***|Tests for Dispatches POM|                                                                      
-|***GoogleApiTests***|Tests for the Gmail API|                                                                        
-|***LoginTests***|Tests for Login POM|                                                                                
-|***PageObjModels***|Page Object Models & website models, configuration readers and the config itself|                
-|***PollsTests***|Tests for Polls POM|                                                                                
-|***ResultsTests***|Tests for Results POM|                                                                            
-|***SharedTestTools***|Library tools and helpers for writing tests|                                                   
-|***SystemTests***|Tests the End-to-End system (log in -> send & complete test -> check tests are completed in table)|
+|***AssessmentTests***|Tests for Assessment POM|[<img src="DocsImg/AssessmentTests_CD.png" alt="AssessmentTests class diagram" width="512"/>]("APITestTools/AssessmentTests.cd")|                                                                      
+|***DispatchesTests***|Tests for Dispatches POM|[<img src="DocsImg/DispatchesTests_CD.png" alt="DispatchesTests class diagram" width="512"/>]("APITestTools/DispatchesTests.cd")|                                                                      
+|***GoogleApiTests***|Tests for the Gmail API|[<img src="DocsImg/GoogleApiTests_CD.png" alt="GoogleApiTests class diagram" width="512"/>]("APITestTools/GoogleApiTests.cd")|                                                                       
+|***LoginTests***|Tests for Login POM|[<img src="DocsImg/LoginTests_CD.png" alt="LoginTests class diagram" width="512"/>]("APITestTools/LoginTests.cd")|                                                                                
+|***PageObjModels***|Page Object Models & website models, configuration readers and the config itself|[<img src="DocsImg/PageObjModels_CD.png" alt="PageObjModels class diagram" width="512"/>]("APITestTools/PageObjModels.cd")|                
+|***PollsTests***|Tests for Polls POM|[<img src="DocsImg/PollsTests_CD.png" alt="PollsTests class diagram" width="512"/>]("APITestTools/PollsTests.cd")|                                                                            
+|***ResultsTests***|Tests for Results POM|[<img src="DocsImg/ResultsTests_CD.png" alt="ResultsTests class diagram" width="512"/>]("APITestTools/ResultsTests.cd")|                                                                            
+|***SharedTestTools***|Library tools and helpers for writing tests|[<img src="DocsImg/SharedTestTools_CD.png" alt="SharedTestTools class diagram" width="512"/>]("APITestTools/SharedTestTools.cd")|                                                   
+|***SystemTests***|Tests the End-to-End system (log in -> send & complete test -> check tests are completed in table)|[<img src="DocsImg/SystemTests_CD.png" alt="SystemTests class diagram" width="512"/>]("APITestTools/SystemTests.cd")|
 
-¹Clicking the picture leads to the class diagram (.cd) file, viewable in Visual Studio
+¹Clicking the picture leads to the class diagram (.cd) file, viewable in Visual Studio 
 
 ### Agreed conventions (made only when needed)  
 
-♦ ```public```, ```private``` and ```protected``` fields: <br/>
+♦ ```public```, ```private``` and ```protected``` fields:<br/>
 
 |Access modifier|Naming Convention|Case|Underscore?⬜️✅|
 |---------------|-----------------|----|---------------|

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DispatchesTests.cd" />
     <None Include="Features\PageAccess.feature" />
   </ItemGroup>
   <ItemGroup>

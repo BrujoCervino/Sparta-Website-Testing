@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PageObjectModels.PollsKeyValues" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>PollsKeyValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.PagesConfigReader" Collapsed="true">
+    <Position X="1" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAIQAAgACAAAAAUAAA=</HashCode>
+      <FileName>PagesConfigReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.LoginConfigReader" Collapsed="true">
+    <Position X="3" Y="7.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>LoginConfigReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.ConfigReader" Collapsed="true">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.ConfigRoot" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAABAAAAAIAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.Pages" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAACABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.LoginDetails" Collapsed="true">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.Browserlocations" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.BrowserConfigReader" Collapsed="true">
+    <Position X="5.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>BrowserConfigReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.NavigationObjs" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAACGAAEAACAAgAAAAAgAAAAAA=</HashCode>
+      <FileName>POM\NavigationObjs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.SuperPage" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAEAAQEAIEQAAAAIAEACAA=</HashCode>
+      <FileName>POM\SuperPage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PageObjModels.CodinGameWebsite" Collapsed="true">
+    <Position X="8.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAgAAAAAA=</HashCode>
+      <FileName>Website\CodinGameWebsite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjModels.SpartaWebsite" Collapsed="true">
+    <Position X="11" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAABAAQAAIAAAAAEAAAEAAAA=</HashCode>
+      <FileName>Website\SpartaWebsite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjModels.Website" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAAAAAADAAAA=</HashCode>
+      <FileName>Website\Website.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.Driver_Config.SeleniumDriverConfig" Collapsed="true">
+    <Position X="20.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAEAAAAAAAAAAAAAAAAAABgAACAAAAAAAAAAA=</HashCode>
+      <FileName>Driver_Config\SeleniumDriverConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.Driver_Config.SeleniumDriverFactory" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Driver_Config\SeleniumDriverFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.POM.AssessmentPage" Collapsed="true">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAEAAQAQAAACAAAgAIMACgEAAAAAABAEAAAEAAA=</HashCode>
+      <FileName>POM\Assessmentpage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.POM.CodinGame" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAEIAAgABAYIAoAAAAAAgAQBAAAAAAAAAAYAACAA=</HashCode>
+      <FileName>POM\CodinGamePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.POM.DispatchesPage" Collapsed="true">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEAAAAAAAAAAAAIgAAAAAAAAAAgAAAAAAAAAICQ=</HashCode>
+      <FileName>POM\DispatchesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.POM.LoginPage" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFBAAAAQBQAAAAACAAAAQAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <FileName>POM\LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.POM.PollsPage" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAAAAAAABAAAIgAAAAAAAAAAgAAAAAAAAAICA=</HashCode>
+      <FileName>POM\PollsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.POM.ResultsPage" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAADAEACgEAAAABAwIAAAQATAAAFAAABFYBCAAA=</HashCode>
+      <FileName>POM\ResultsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjectModels.POM.TablePage" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>POM\TablePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjModels.POM.LogoutConfirmationPage" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFBgAAAQBQAAAAACAAAAAAAAAACgAAAAAAAAAAAAA=</HashCode>
+      <FileName>POM\LogoutConfirmationPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PageObjectModels.IPage" Collapsed="true">
+    <Position X="17.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAEAAAAAIAQAAAAIAEAAAA=</HashCode>
+      <FileName>POM\IPage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

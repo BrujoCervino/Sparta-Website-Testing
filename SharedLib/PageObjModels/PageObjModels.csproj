@@ -87,6 +87,7 @@
     <Compile Include="Website\Website.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="PageObjModels.cd" />
     <None Include="Config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

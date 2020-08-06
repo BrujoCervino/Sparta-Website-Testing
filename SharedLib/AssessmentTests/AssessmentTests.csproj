@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="AssessmentTests.cd" />
     <None Include="Feature\InvalidInput.feature" />
     <None Include="Feature\InvalidEmail.feature" />
     <None Include="packages.config" />

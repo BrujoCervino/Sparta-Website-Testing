@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AssessmentTests.AssessmentNavigationTests">
+    <Position X="3.75" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAEAAAAABBAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>SendAssessmentTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AssessmentTests.Steps.InvalidInputSteps">
+    <Position X="8.25" Y="1.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AWAAAAgAAAAAAAgEAAAAACAAAAAAAAAAoABgAAEQEQE=</HashCode>
+      <FileName>Steps\InvalidInputSteps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
