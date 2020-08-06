@@ -26,32 +26,34 @@ namespace SharedTestTools
 
         public static void DoCodingGameTest(string browser)
         {
-            CodinGameWebsite codinGameWebsite = SetupCodinGameWebsite(browser);
+            CodinGameWebsite codinGameWebsite = SetupCodinGameWebsite(browser, out string msgID);
 
             codinGameWebsite.DoTest();
 
-            CloseCodinGameWebsite(codinGameWebsite);
+            CloseCodinGameWebsite(codinGameWebsite, msgID);
         }
 
         public static void StartCodingTest(string browser)
         {
             //get test url
-            CodinGameWebsite codinGameWebsite = SetupCodinGameWebsite(browser);
+            CodinGameWebsite codinGameWebsite = SetupCodinGameWebsite(browser, out string msgID);
 
             codinGameWebsite.StatTest();
 
-            CloseCodinGameWebsite(codinGameWebsite);
+            CloseCodinGameWebsite(codinGameWebsite, msgID);
         }
 
-        private static void CloseCodinGameWebsite(CodinGameWebsite codinGameWebsite)
+        private static void CloseCodinGameWebsite(CodinGameWebsite codinGameWebsite, string msgID)
         {
+            //delete email here
+            new GmailAPIManager().DeleteEmail(msgID);
+
             codinGameWebsite.Close();
         }
 
-        private static CodinGameWebsite SetupCodinGameWebsite(string browser)
+        private static CodinGameWebsite SetupCodinGameWebsite(string browser, out string msgID)
         {
-            GmailAPIManager apiManager = new GmailAPIManager();
-            string url = apiManager.GetEmailUrl();
+            string url = new GmailAPIManager().GetEmailUrl(out msgID);
 
             //go to url
             CodinGameWebsite codinGameWebsite = new CodinGameWebsite(browser, url);
