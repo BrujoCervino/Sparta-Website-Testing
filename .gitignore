@@ -352,5 +352,7 @@ MigrationBackup/
 # Config.json
 **/[Cc]onfig.json*
 
+# Config.json
+**/[Cc]redentails.json*
 
 
