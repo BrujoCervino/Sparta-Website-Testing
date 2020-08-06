@@ -11,10 +11,6 @@ namespace PageObjectModels.POM
         private IWebElement recruiterEmail => _seleniumDriver.FindElement(By.Id("recruiter_email"));
         private IWebElement submitButton => _seleniumDriver.FindElement(By.Id("submit"));
         private IWebElement psychometriccheckbox => _seleniumDriver.FindElement(By.Id("checkbox"));
-        private IWebElement dispatches => _seleniumDriver.FindElement(By.CssSelector("[href *='/dispatches']"));
-        private IWebElement results => _seleniumDriver.FindElement(By.CssSelector("[href *='/results']"));
-        private IWebElement polls => _seleniumDriver.FindElement(By.CssSelector("[href *='/polls']"));
-        private IWebElement logout => _seleniumDriver.FindElement(By.CssSelector("[href *='/logout']"));
         private IWebElement errorMessage => _seleniumDriver.FindElement(By.TagName("h5"));
         private IWebElement assessmentSent => _seleniumDriver.FindElement(By.TagName("h1"));
 
@@ -56,26 +52,6 @@ namespace PageObjectModels.POM
         public void SelectAssessment(string course)
         {
            asessmentDropDown.SelectByValue(course);
-        }
-
-        public void GotoDispatch()
-        {
-            dispatches.Click();
-        }
-
-        public void Gotoresults()
-        {
-            results.Click();
-        }
-
-        public void GotoPolls()
-        {
-            polls.Click();
-        }
-
-        public void Logout()
-        {
-            logout.Click();
         }
 
         public string CaptureAlertMessage()

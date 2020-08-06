@@ -161,7 +161,7 @@ namespace SystemTests.Steps
         [Then(@"""(.*)""should be displayed")]
         public void ThenShouldBeDisplayed(string message)
         {
-            Assert.That()
+            Assert.That(_spartaWebsite.logoutConfirmationPage.GetSuccessMsg(), Does.Contain(message));
         }
 
         #endregion
