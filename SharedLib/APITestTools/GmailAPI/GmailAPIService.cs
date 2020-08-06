@@ -23,7 +23,7 @@ namespace EmailApi
 
 
         public GmailAPIManager()
-		{
+        {
             string root = AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("SharedLib"));
 
             //Autorisation for Gmail Credentials
@@ -37,25 +37,27 @@ namespace EmailApi
                     Scopes,
                     "user",
                     CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;              
+                    new FileDataStore(credPath, true)).Result;
             }
         }
 
-        public string GetEmailUrl()
+        public string GetEmailUrl(out string msgID)
         {
+            msgID = GetMostCurrentEmailID();
+
             //"me" is the identifier used by google to represent authenticated user.
-            Message message = CreateService().Users.Messages.Get("me", GetMostCurrentEmailID()).Execute();
+            Message message = CreateService().Users.Messages.Get("me", msgID).Execute();
 
             //Choose which format you want to recieve response, [0],[0] test. [0],[1] html
             string data = message.Payload.Parts[0].Parts[0].Body.Data;
 
-			//Replace invlaid char with correct
-			byte[] base64EncodedResponse = Convert.FromBase64String(data.Replace("_", "/").Replace("-","+"));
+            //Replace invlaid char with correct
+            byte[] base64EncodedResponse = Convert.FromBase64String(data.Replace("_", "/").Replace("-", "+"));
 
             string base64Decoded = System.Text.ASCIIEncoding.ASCII.GetString(base64EncodedResponse);
 
-			//Find the URL within the text response
-			Regex pattern = new Regex(@"(https://www\.codingame\.com/evaluate)\S+");
+            //Find the URL within the text response
+            Regex pattern = new Regex(@"(https://www\.codingame\.com/evaluate)\S+");
 
             foreach (Match m in pattern.Matches(base64Decoded))
             {
@@ -64,7 +66,19 @@ namespace EmailApi
             return codingameUrl;
         }
 
-        internal GmailService CreateService() 
+        public void DeleteEmail(string messageId)
+        {
+            try
+            {
+                CreateService().Users.Messages.Delete("me", messageId).Execute();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("An error occurred: " + e.Message);
+            }
+        }
+
+        internal GmailService CreateService()
         {
             // Create Gmail API service.
             var service = new GmailService(new BaseClientService.Initializer()
@@ -82,8 +96,6 @@ namespace EmailApi
             var firstMessageResponse = emailID[0];
             return firstMessageResponse.Id;
         }
-
-        
 
         internal static List<Message> ListMessages(GmailService service, String userId, String query)
         {

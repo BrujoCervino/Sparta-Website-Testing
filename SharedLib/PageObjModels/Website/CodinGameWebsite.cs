@@ -7,7 +7,7 @@ namespace PageObjModels
     {
         public CodinGame codinGamePage;
 
-        public CodinGameWebsite(string driverName, string testUrl, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5) : base(driverName, pageLoadInSeconds, implicitWaitInSeconds)
+        public CodinGameWebsite(string driverName, string testUrl, int pageLoadInSeconds = 10, int implicitWaitInSeconds = 10) : base(driverName, pageLoadInSeconds, implicitWaitInSeconds)
         {
             codinGamePage = new CodinGame(SeleniumDriver, testUrl);
         }

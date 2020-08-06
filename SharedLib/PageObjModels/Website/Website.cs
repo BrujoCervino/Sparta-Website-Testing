@@ -9,7 +9,7 @@ namespace PageObjModels
     {
         public readonly IWebDriver SeleniumDriver;
 
-        public Website(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5)
+        public Website(string driverName, int pageLoadInSeconds = 10, int implicitWaitInSeconds = 10)
         {
             SeleniumDriver = CreateDriver(driverName, pageLoadInSeconds, implicitWaitInSeconds);
         }
