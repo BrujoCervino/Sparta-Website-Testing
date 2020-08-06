@@ -9,5 +9,5 @@ Scenario: Complete a sent out test
 	When the test has been completed
 	And I go to the results page
 	And The results have been updated
-	Then "Bob McCtestyface" should bave a new entry in the C# results table
+	Then "Testy Mctestyface" should bave a new entry in the C# results table
 	And the C# results count has increased by one
