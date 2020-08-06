@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using System;
 
-namespace PageObjectModels.Driver_Config
+namespace PageObjModels.Driver_Config
 {
     public class SeleniumDriverConfig
     {

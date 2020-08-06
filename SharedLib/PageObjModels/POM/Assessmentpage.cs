@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace PageObjectModels.POM
+namespace PageObjModels.POM
 {
     public class AssessmentPage : NavigationObjs
     {

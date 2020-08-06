@@ -61,12 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserConfigReader.cs" />
+    <Compile Include="POM\LoginObjs.cs" />
     <Compile Include="POM\LogoutConfirmationPage.cs" />
     <Compile Include="POM\NavigationObjs.cs" />
+    <Compile Include="POM\SpartaPages.cs" />
     <Compile Include="Website\CodinGameWebsite.cs" />
     <Compile Include="ConfigModel.cs" />
     <Compile Include="ConfigReader.cs" />
-    <Compile Include="DispatchesKeyValues.cs" />
     <Compile Include="Driver_Config\SeleniumDriverConfig.cs" />
     <Compile Include="Driver_Config\SeleniumDriverFactory.cs" />
     <Compile Include="POM\IPage.cs" />

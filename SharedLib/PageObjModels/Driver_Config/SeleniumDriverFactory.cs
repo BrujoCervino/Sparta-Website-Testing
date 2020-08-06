@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace PageObjectModels.Driver_Config
+namespace PageObjModels.Driver_Config
 {
     // "Factory Pattern" design pattern: means we don't have to keep writing "new SeleniumDriverConfig.Driver"
     public class SeleniumDriverFactory 

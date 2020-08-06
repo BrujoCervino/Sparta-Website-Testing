@@ -1,8 +1,6 @@
-﻿using System.Threading;
-using EmailApi;
+﻿using EmailApi;
 using NUnit.Framework;
 using PageObjModels;
-using SharedTestTools;
 
 namespace GoogleApiTests
 {
@@ -22,6 +20,5 @@ namespace GoogleApiTests
 
             codingGameWebsite.Close();
         }
-
     }
 }
