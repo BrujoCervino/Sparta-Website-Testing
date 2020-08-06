@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BoDi, Version=1.4.1.0, Culture=neutral, PublicKeyToken=ff7cd5ea2744b496, processorArchitecture=MSIL">
+      <HintPath>..\packages\BoDi.1.4.1\lib\net45\BoDi.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -52,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\APITestTools\APITestTools.csproj">
+      <Project>{233DB0C4-3148-4026-A2B8-2A69E62A8C6F}</Project>
+      <Name>APITestTools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PageObjModels\PageObjModels.csproj">
       <Project>{DD52ECCC-3358-49F4-BFEB-4862941B26C1}</Project>
       <Name>PageObjModels</Name>

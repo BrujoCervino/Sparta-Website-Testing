@@ -45,16 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetTableValuesTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\PageAccessSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Features\PageAccess.feature" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PageObjModels\PageObjModels.csproj">
       <Project>{DD52ECCC-3358-49F4-BFEB-4862941B26C1}</Project>
       <Name>PageObjModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharedTestTools\SharedTestTools.csproj">
+      <Project>{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}</Project>
+      <Name>SharedTestTools</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +160,7 @@
       <Version>1.3.7</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

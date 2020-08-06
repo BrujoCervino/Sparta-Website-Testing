@@ -356,3 +356,5 @@ MigrationBackup/
 **/[Cc]redentails.json*
 
 
+# credentials.json
+**/[Cc]redentials.json*

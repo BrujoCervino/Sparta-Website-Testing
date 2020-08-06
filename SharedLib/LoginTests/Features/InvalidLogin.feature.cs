@@ -191,9 +191,8 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Invalid username with invalid Password")]
         [NUnit.Framework.CategoryAttribute("InvalidLogin")]
-        [NUnit.Framework.TestCaseAttribute("incorrectUsername", "incorrectUsername", null)]
         [NUnit.Framework.TestCaseAttribute("!£$%^&*()_+{}@~<>?", "!£$%^&*()_+{}@~<>?", null)]
-        public virtual void InvalidUsernameWithInvalidPassword(string username, string password, string[] exampleTags)
+        public virtual void InvalidUsernameWithInvalidPassword(string incorrectUsername, string incorrectUsername1, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "InvalidLogin"};
@@ -203,8 +202,8 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("username", username);
-            argumentsOfScenario.Add("password", password);
+            argumentsOfScenario.Add("incorrectUsername", incorrectUsername);
+            argumentsOfScenario.Add("incorrectUsername", incorrectUsername1);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Invalid username with invalid Password", null, tagsOfScenario, argumentsOfScenario);
 #line 33
 this.ScenarioInitialize(scenarioInfo);
@@ -230,10 +229,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("that I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 35
- testRunner.Given(string.Format("I entered {0} as a username", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I entered <username> as a username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 36
- testRunner.Given(string.Format("I entered {0} as a password", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I entered <password> as a password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 37
  testRunner.When("I press the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

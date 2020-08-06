@@ -56,6 +56,10 @@
       <Project>{DD52ECCC-3358-49F4-BFEB-4862941B26C1}</Project>
       <Name>PageObjModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SharedTestTools\SharedTestTools.csproj">
+      <Project>{D6A6F226-9B29-4019-ABF6-263E31BA6BD2}</Project>
+      <Name>SharedTestTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BoDi">

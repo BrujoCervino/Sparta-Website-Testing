@@ -117,7 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("The results have been updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then("\"Testy Mctestyface\" should bave a new entry in the C# results table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("\"Bob McCtestyface\" should bave a new entry in the C# results table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 13
  testRunner.And("the C# results count has increased by one", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

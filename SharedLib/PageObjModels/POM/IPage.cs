@@ -1,4 +1,4 @@
-﻿namespace PageObjectModels
+﻿namespace PageObjModels
 {
     public interface IPage
     {

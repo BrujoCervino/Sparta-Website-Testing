@@ -61,12 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserConfigReader.cs" />
+    <Compile Include="POM\LoginObjs.cs" />
+    <Compile Include="POM\LogoutConfirmationPage.cs" />
+    <Compile Include="POM\NavigationObjs.cs" />
+    <Compile Include="POM\SpartaPages.cs" />
+    <Compile Include="Website\CodinGameWebsite.cs" />
     <Compile Include="ConfigModel.cs" />
     <Compile Include="ConfigReader.cs" />
-    <Compile Include="DispatchesKeyValues.cs" />
     <Compile Include="Driver_Config\SeleniumDriverConfig.cs" />
     <Compile Include="Driver_Config\SeleniumDriverFactory.cs" />
-    <Compile Include="IPage.cs" />
+    <Compile Include="POM\IPage.cs" />
     <Compile Include="LoginConfigReader.cs" />
     <Compile Include="PagesConfigReader.cs" />
     <Compile Include="PollsKeyValues.cs" />
@@ -76,15 +80,18 @@
     <Compile Include="POM\LoginPage.cs" />
     <Compile Include="POM\PollsPage.cs" />
     <Compile Include="POM\ResultsPage.cs" />
+    <Compile Include="POM\TablePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpartaWebsite.cs" />
-    <Compile Include="SuperPage.cs" />
+    <Compile Include="Website\SpartaWebsite.cs" />
+    <Compile Include="POM\SuperPage.cs" />
+    <Compile Include="Website\Website.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="POM\PomClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
