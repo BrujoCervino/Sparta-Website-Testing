@@ -110,15 +110,15 @@ Workflow for Config.json:
 |Name|Purpose|Class diagram¹|
 |-|-|
 |***APITestTools***|Library code for both the Gmail and Dispatches APIs|[<img src="DocsImg/APITestTools_CD.png" alt="APITestTools class diagram" width="512"/>]("APITestTools/APITestTools.cd")|                                             
-|***AssessmentTests***|Tests for Assessment POM|                                                                      
-|***DispatchesTests***|Tests for Dispatches POM|                                                                      
-|***GoogleApiTests***|Tests for the Gmail API|                                                                        
-|***LoginTests***|Tests for Login POM|                                                                                
-|***PageObjModels***|Page Object Models & website models, configuration readers and the config itself|                
-|***PollsTests***|Tests for Polls POM|                                                                                
-|***ResultsTests***|Tests for Results POM|                                                                            
-|***SharedTestTools***|Library tools and helpers for writing tests|                                                   
-|***SystemTests***|Tests the End-to-End system (log in -> send & complete test -> check tests are completed in table)|
+|***AssessmentTests***|Tests for Assessment POM||                                                                      
+|***DispatchesTests***|Tests for Dispatches POM||                                                                      
+|***GoogleApiTests***|Tests for the Gmail API||                                                                       
+|***LoginTests***|Tests for Login POM||                                                                                
+|***PageObjModels***|Page Object Models & website models, configuration readers and the config itself||                
+|***PollsTests***|Tests for Polls POM||                                                                            
+|***ResultsTests***|Tests for Results POM||                                                                            
+|***SharedTestTools***|Library tools and helpers for writing tests||                                                   
+|***SystemTests***|Tests the End-to-End system (log in -> send & complete test -> check tests are completed in table)||
 
 ¹Clicking the picture leads to the class diagram (.cd) file, viewable in Visual Studio
 
