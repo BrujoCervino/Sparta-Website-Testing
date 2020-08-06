@@ -5,6 +5,7 @@ namespace PageObjModels.POM
 {
     public class AssessmentPage : NavigationObjs
     {
+        //Finding the Webelemets
         private SelectElement asessmentDropDown => new SelectElement(_seleniumDriver.FindElement(By.Id("assessment")));
         private IWebElement candidateName => _seleniumDriver.FindElement(By.Id("candidate_name"));
         private IWebElement candidateEmail => _seleniumDriver.FindElement(By.Id("candidate_email"));
@@ -54,11 +55,12 @@ namespace PageObjModels.POM
            asessmentDropDown.SelectByValue(course);
         }
 
-        public string CaptureAlertMessage()
-        {
-            var allertM = _seleniumDriver.SwitchTo().Alert();
-            return allertM.ToString();
-        }
+        //Wanted to capture the prompt message
+        //public string CaptureAlertMessage()
+        //{
+        //    var allertM = _seleniumDriver.SwitchTo().Alert();
+        //    return allertM.ToString();
+        //}
 
         public string BadRequest()
         {
