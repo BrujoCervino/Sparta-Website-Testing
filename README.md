@@ -4,7 +4,7 @@
 
 ## The Project
 
-~ ***[Please refer to the Jira Project here](https://spartaglobal.atlassian.net/secure/RapidBoard.jspa?rapidView=243&projectKey=NG58FNLPRJ&view=planning&issueLimit=100)***
+~ ***[Please refer to the Jira Project here](https://spartaglobal.atlassian.net/secure/RapidBoard.jspa?rapidView=243&projectKey=NG58FNLPRJ&view=planning&issueLimit=100)*** ~
 <br/>
 **Timeframe**: Mon: Jul-27-2020 - Fri: Aug-7-2020 (2 weeks)
 <br/><br/>
@@ -17,9 +17,30 @@
 
 ## Code
 
-### Workflows
+### Getting Started
 
-#### 
+***1 ~*** Ensure you have a ```Config.json``` located within the ```/PageObjectModels``` folder
+<img src="DocsImg/PageObjConfig.png" alt="PageObjConfig" width="512"/> <br/>
+
+If you skip this step, this compile-time error will appear at least once:
+
+<img src="DocsImg/MissingConfigError.png" alt="Missing Config Error" width="512"/> <br/>
+
+***2 ~*** Add the fields you need into ```Config.json```
+
+### Testing/adding a new page
+
+***1 ~*** Add a new class (this will be your page object model) to the ```PageObjModels``` project which extends ```SuperPage```.
+
+<img src="DocsImg/NewPomClass.png" alt="Adding a new page object model" width="512"/>
+
+***2 ~*** Add a new .NET Framework class library project (.csproj) to the solution.
+
+<img src="DocsImg/AddNewProj.png" alt="Adding a new project" width="512"/>
+
+***3 ~*** Add dependencies to your project: right-click the solution file in the Solution Explorer
+
+<img src="DocsImg/null.png" alt="Adding a new project" width="512"/>
 
 ### Projects
 
