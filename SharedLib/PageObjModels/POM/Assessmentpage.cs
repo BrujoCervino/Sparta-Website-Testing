@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace PageObjectModels.POM
 {
-    public class AssessmentPage : SuperPage
+    public class AssessmentPage : NavigationObjs
     {
         private SelectElement asessmentDropDown => new SelectElement(_seleniumDriver.FindElement(By.Id("assessment")));
         private IWebElement candidateName => _seleniumDriver.FindElement(By.Id("candidate_name"));

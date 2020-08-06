@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PageObjectModels.POM
 {
-    public abstract class TablePage : SuperPage
+    public abstract class TablePage : NavigationObjs
     {
         public TablePage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
