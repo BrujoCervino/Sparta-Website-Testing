@@ -8,8 +8,8 @@ namespace PageObjModels.POM
     {
         static Random _rnd = new Random();
 
-        private IWebElement startButton => _seleniumDriver.FindElement(By.CssSelector("button[data-test=AssessmentTile - TileButton]"));
-        private IWebElement tOSCheckBox => _seleniumDriver.FindElement(By.CssSelector("div[data-test=AssessmentStartPopup] input"));
+        private IWebElement startButton => _seleniumDriver.FindElement(By.CssSelector("div[data-test=AssessmentTile] button"));
+        private IWebElement tOSCheckBox => _seleniumDriver.FindElement(By.CssSelector("div[data-test=AssessmentStartPopup] label"));
         private IWebElement beginButton => _seleniumDriver.FindElement(By.CssSelector("div[data-test=AssessmentStartPopup] button[data-test=accept]"));
         private IReadOnlyCollection<IWebElement> answers => _seleniumDriver.FindElements(By.CssSelector("#root > div.c0150.c0151 > div > div > div > div.Pane.vertical.Pane2 > div > div.c01154 > div > div.c01132 > div > div.c01136.c01137 > form"));
         private IWebElement nextSubmitButton => _seleniumDriver.FindElement(By.CssSelector("#root > div.c0150.c0151 > div > div > div > div.Pane.vertical.Pane2 > div > div.c01154 > div > div.c01133 > button"));   
