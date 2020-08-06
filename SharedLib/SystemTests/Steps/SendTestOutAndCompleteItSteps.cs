@@ -45,6 +45,12 @@ namespace SystemTests.Steps
             _spartaWebsite.SleepDriver(sleepTime);
         }
 
+        [Given(@"I login to the Website")]
+        public void GivenILoginToTheWebsite()
+        {
+            TestTools.Login(_spartaWebsite);
+        }
+
         #endregion
 
         #region Act
@@ -87,6 +93,33 @@ namespace SystemTests.Steps
         {
             _spartaWebsite.pollsPage.Visit();
         }
+
+        [When(@"I click to the results page")]
+        public void WhenIClickToTheResultsPage()
+        {
+            _spartaWebsite.assessmentPage.ClickResults();
+        }
+
+        [When(@"I lick to Dispatches page")]
+        public void WhenILickToDispatchesPage()
+        {
+            _spartaWebsite.resultsPage.ClickDispatches();
+        }
+
+        [When(@"I click to Polls page")]
+        public void WhenIClickToPollsPage()
+        {
+            _spartaWebsite.dispatchesPage.ClickPolls();
+        }
+
+
+        [When(@"I press Logout")]
+        public void WhenIPressLogout()
+        {
+            _spartaWebsite.pollsPage.Clicklogout();
+        }
+
+        
         #endregion
 
         #region Assert
@@ -123,6 +156,12 @@ namespace SystemTests.Steps
             Assert.That(dispatchdata[0][4], Is.EqualTo(pollsdata[0][3]));
             Assert.That(status, Is.EqualTo(pollsdata[0][1]));
 
+        }
+
+        [Then(@"""(.*)""should be displayed")]
+        public void ThenShouldBeDisplayed(string message)
+        {
+            Assert.That()
         }
 
         #endregion
