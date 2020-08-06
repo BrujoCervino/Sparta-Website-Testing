@@ -1,4 +1,4 @@
-﻿namespace PageObjectModels
+﻿namespace PageObjModels
 {
     // Exists for people whose browsers are not in the default location
     public class BrowserConfigReader : ConfigReader

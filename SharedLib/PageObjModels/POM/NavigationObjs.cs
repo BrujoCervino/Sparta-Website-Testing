@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
 
-namespace PageObjectModels
+namespace PageObjModels
 {
-    public abstract class NavigationObjs : SuperPage
+    public abstract class NavigationObjs : SpartaPages
     {
         public NavigationObjs(IWebDriver seleniumDriver) : base(seleniumDriver)
         {

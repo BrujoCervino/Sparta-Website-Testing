@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PageObjectModels.POM
+namespace PageObjModels.POM
 {
     public class CodinGame : SuperPage
     {

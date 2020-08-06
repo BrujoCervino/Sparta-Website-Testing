@@ -1,8 +1,6 @@
 ﻿using APITestTools.SpartaAPI;
 using EmailApi;
-using PageObjectModels;
 using PageObjModels;
-using System;
 
 namespace SharedTestTools
 {

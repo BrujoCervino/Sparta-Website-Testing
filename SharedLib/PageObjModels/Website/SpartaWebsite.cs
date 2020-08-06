@@ -1,4 +1,4 @@
-﻿using PageObjectModels.POM;
+﻿using PageObjModels.POM;
 using PageObjModels.POM;
 
 namespace PageObjModels
