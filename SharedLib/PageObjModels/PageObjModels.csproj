@@ -66,6 +66,7 @@
     <Compile Include="Website\CodinGameWebsite.cs" />
     <Compile Include="ConfigModel.cs" />
     <Compile Include="ConfigReader.cs" />
+    <Compile Include="DispatchesKeyValues.cs" />
     <Compile Include="Driver_Config\SeleniumDriverConfig.cs" />
     <Compile Include="Driver_Config\SeleniumDriverFactory.cs" />
     <Compile Include="POM\IPage.cs" />
