@@ -12,7 +12,7 @@ namespace GoogleApiTests
         public void GoogleApi_IsWorkingCorrectly()
         {
             GmailAPIManager apiManager = new GmailAPIManager();
-            string url = apiManager.GetEmailUrl();
+            string url = apiManager.GetEmailUrl(out string msgID);
 
             //go to url
             CodinGameWebsite codingGameWebsite = new CodinGameWebsite("chrome", url);

@@ -104,8 +104,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given("\"Bob McCtestyface\" has been sent a \"csharp\" test to \"testproject.dummy456@gmail.c" +
-                        "om\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("\"Testy Mctestyface\" has been sent a \"csharp\" test to \"testproject.dummy456@gmail." +
+                        "com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
  testRunner.When("the test has been completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
