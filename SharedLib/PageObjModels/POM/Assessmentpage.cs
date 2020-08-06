@@ -1,8 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Linq;
-using System.Threading;
 
 namespace PageObjectModels.POM
 {
@@ -19,7 +16,9 @@ namespace PageObjectModels.POM
         private IWebElement polls => _seleniumDriver.FindElement(By.CssSelector("[href *='/polls']"));
         private IWebElement logout => _seleniumDriver.FindElement(By.CssSelector("[href *='/logout']"));
         private IWebElement errorMessage => _seleniumDriver.FindElement(By.TagName("h5"));
-       
+        private IWebElement assessmentSent => _seleniumDriver.FindElement(By.TagName("h1"));
+
+
         public AssessmentPage(IWebDriver seleniumDriver) : base(seleniumDriver)
         {
             _url = "https://uat.spartaglobal.academy/";
@@ -35,7 +34,6 @@ namespace PageObjectModels.POM
         {
             candidateEmail.Clear();
             candidateEmail.SendKeys(cEmail);
-            Thread.Sleep(3000);
 
         }
 
@@ -43,13 +41,10 @@ namespace PageObjectModels.POM
         {
             recruiterEmail.Clear();
             recruiterEmail.SendKeys(rEmail);
-            Thread.Sleep(10000);
-
         }
 
         public void SubmitDetails()
-        {
-            
+        { 
             submitButton.Click();
         }
 
@@ -92,6 +87,11 @@ namespace PageObjectModels.POM
         public string BadRequest()
         {
             return errorMessage.Text;
+        }
+
+        public string Success()
+        {
+            return assessmentSent.Text;
         }
     }
 }

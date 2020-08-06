@@ -6,7 +6,6 @@ using Google.Apis.Util.Store;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 
@@ -22,8 +21,10 @@ namespace EmailApi
 
 		public GmailAPIManager()
 		{
+            string root = AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("SharedLib"));
+
             //Autorisation for Gmail Credentials
-            using (var stream = new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+            using (FileStream stream = new FileStream(root + "SharedLib\\APITestTools\\bin\\Debug\\GmailAPI\\credentials.json", FileMode.Open, FileAccess.Read))
             {
                 // The file token.json stores the user's access and refresh tokens, and is created
                 // automatically when the authorization flow completes for the first time.

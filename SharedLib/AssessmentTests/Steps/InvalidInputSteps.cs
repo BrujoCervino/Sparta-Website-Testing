@@ -1,8 +1,7 @@
 ﻿using NUnit.Framework;
-using PageObjectModels;
-using System;
-using TechTalk.SpecFlow;
+using PageObjModels;
 using SharedTestTools;
+using TechTalk.SpecFlow;
 
 namespace AssessmentTests.Steps
 {
@@ -71,6 +70,19 @@ namespace AssessmentTests.Steps
         {
             _website.assessmentPage.EnterRecruiterEmail("shwetha21ashwath@gmail.com");
         }
+
+        [Given(@"I have entered Invalid candidate name (.*)")]
+        public void GivenIHaveEnteredInvalidCandidateName(string name)
+        {
+            _website.assessmentPage.EnterCandidateName(name);
+        }
+
+        [Given(@"None of the text boxes are in focus")]
+        public void GivenNoneOfTheTextBoxesAreInFocus()
+        {
+            _website.assessmentPage.ClickTitle();
+        }
+
         #endregion
 
 
@@ -93,7 +105,16 @@ namespace AssessmentTests.Steps
         public void ThenIShouldBeShownAnErrorMessage(string errormessage)
         {
             Assert.That(_website.assessmentPage.BadRequest(), Is.EqualTo(errormessage));
-        } 
+        }
+
+
+        [Then(@"I shouldn't get a message Assessment Sent")]
+        public void ThenIShouldnTGetAMessageAssessmentSent()
+        {
+            Assert.That(_website.assessmentPage.Success(), Is.Not.EqualTo("Assessment Sent"));
+        }
+
+
         #endregion
 
 

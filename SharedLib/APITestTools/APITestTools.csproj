@@ -89,7 +89,9 @@
     <Compile Include="SpartaAPI\SpartaAPIService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GmailAPI\credentials.json" />
+    <None Include="GmailAPI\credentials.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
