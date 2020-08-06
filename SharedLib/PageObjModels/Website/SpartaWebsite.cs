@@ -13,7 +13,7 @@ namespace PageObjModels
         public readonly LogoutConfirmationPage logoutConfirmationPage;
 
 
-        public SpartaWebsite(string driverName, int pageLoadInSeconds = 5, int implicitWaitInSeconds = 5) : base(driverName, pageLoadInSeconds, implicitWaitInSeconds)
+        public SpartaWebsite(string driverName, int pageLoadInSeconds = 10, int implicitWaitInSeconds = 10) : base(driverName, pageLoadInSeconds, implicitWaitInSeconds)
         {           
             assessmentPage = new AssessmentPage(SeleniumDriver);
             resultsPage = new ResultsPage(SeleniumDriver);

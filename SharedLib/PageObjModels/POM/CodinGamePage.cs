@@ -8,11 +8,9 @@ namespace PageObjModels.POM
     {
         static Random _rnd = new Random();
 
-        private IWebElement startButton => _seleniumDriver.FindElement(By.CssSelector("#root > div > div > div > div:nth-child(2) > div > div > button"));
-
-        //Don't judge me for using XPath. It's the only one that works
-        private IWebElement tOSCheckBox => _seleniumDriver.FindElement(By.XPath("/ html / body / div[2] / div / div / div / div[2] / p[6] / span"));
-        private IWebElement beginButton => _seleniumDriver.FindElement(By.XPath("/html/body/div[2]/div/div/div/div[3]/button[2]"));
+        private IWebElement startButton => _seleniumDriver.FindElement(By.CssSelector("div[data-test=AssessmentTile] button"));
+        private IWebElement tOSCheckBox => _seleniumDriver.FindElement(By.CssSelector("div[data-test=AssessmentStartPopup] label"));
+        private IWebElement beginButton => _seleniumDriver.FindElement(By.CssSelector("div[data-test=AssessmentStartPopup] button[data-test=accept]"));
         private IReadOnlyCollection<IWebElement> answers => _seleniumDriver.FindElements(By.CssSelector("#root > div.c0150.c0151 > div > div > div > div.Pane.vertical.Pane2 > div > div.c01154 > div > div.c01132 > div > div.c01136.c01137 > form"));
         private IWebElement nextSubmitButton => _seleniumDriver.FindElement(By.CssSelector("#root > div.c0150.c0151 > div > div > div > div.Pane.vertical.Pane2 > div > div.c01154 > div > div.c01133 > button"));   
         private IWebElement selectQuestion(int num) => _seleniumDriver.FindElement(By.CssSelector($"#root > div.c0150.c0151 > div > div > div > div > div > div > div.c01102 > div > div:nth-child({num}) > div.c0191.c01101 > span > button"));
