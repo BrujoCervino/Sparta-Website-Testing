@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
-using PageObjectModels;
+using PageObjModels;
 using System;
 using System.Collections.Generic;
 
-namespace PageObjectModels.POM
+namespace PageObjModels.POM
 {
     public class ResultsPage : TablePage
     {

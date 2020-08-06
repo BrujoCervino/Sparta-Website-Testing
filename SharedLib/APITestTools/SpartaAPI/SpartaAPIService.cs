@@ -7,7 +7,7 @@ using Google.Apis.Gmail.v1;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
-using PageObjectModels;
+using PageObjModels;
 using RestSharp;
 
 

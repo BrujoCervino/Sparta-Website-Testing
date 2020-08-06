@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace PageObjectModels.POM
+namespace PageObjModels.POM
 {
     public class PollsPage : TablePage
     {

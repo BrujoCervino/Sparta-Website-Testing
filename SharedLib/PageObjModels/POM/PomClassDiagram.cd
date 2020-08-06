@@ -1,73 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="PageObjectModels.POM.AssessmentPage">
-    <Position X="0.5" Y="8.5" Width="2.75" />
+  <Class Name="PageObjModels.POM.AssessmentPage">
+    <Position X="0.5" Y="10.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AIAAACEEAQARAAACAAAiAMMACgECAAgAABAEAAAEAAA=</HashCode>
+      <HashCode>AIAAAAEAAQAQAAACAAAgAIMACgEAAAAAABAEAAAEAAA=</HashCode>
       <FileName>POM\Assessmentpage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.POM.CodinGame">
-    <Position X="10.5" Y="5" Width="3.25" />
+  <Class Name="PageObjModels.POM.CodinGame">
+    <Position X="16.25" Y="3.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAQAEIAAgABAYIAoAAAAAAgAQBAAAAAAAAAAYAACAA=</HashCode>
       <FileName>POM\CodinGamePage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.POM.DispatchesPage">
-    <Position X="7.5" Y="13" Width="3" />
+  <Class Name="PageObjModels.POM.DispatchesPage">
+    <Position X="7.5" Y="14.75" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAgEEAAAAAAAAAgAAIgAAAAAAAAAAgAAAAAAAAAICQ=</HashCode>
+      <HashCode>AAAgAEAAAAAAAAAAAAIgAAAAAAAAAAgAAAAAAAAAICQ=</HashCode>
       <FileName>POM\DispatchesPage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.POM.LoginPage">
-    <Position X="14.5" Y="5" Width="2.75" />
+  <Class Name="PageObjModels.POM.LoginPage">
+    <Position X="9.5" Y="10.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAFBAAAAQBQAAAAACAAAAQAAAAACAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>POM\LoginPage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.POM.PollsPage">
-    <Position X="3.5" Y="13" Width="3.5" />
+  <Class Name="PageObjModels.POM.PollsPage">
+    <Position X="3.5" Y="14.75" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAgEAAAAAAAAABAAAIgAAAAAAAAAAgAAAAAAAAAICA=</HashCode>
       <FileName>POM\PollsPage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.POM.TablePage">
-    <Position X="6.5" Y="8.5" Width="2.75" />
+  <Class Name="PageObjModels.POM.TablePage">
+    <Position X="6.25" Y="10.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>POM\TablePage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.POM.ResultsPage">
-    <Position X="11.25" Y="13" Width="3.5" />
+  <Class Name="PageObjModels.POM.ResultsPage">
+    <Position X="11.25" Y="14.75" Width="3.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAADAEACgEAAAABAwIAAAQATAAAFAAABFYBCAAA=</HashCode>
       <FileName>POM\ResultsPage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.NavigationObjs">
-    <Position X="3.75" Y="4.75" Width="2.25" />
+  <Class Name="PageObjModels.NavigationObjs">
+    <Position X="3.75" Y="6.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAACGAAEAACAAgAAAAAgAAAAAA=</HashCode>
       <FileName>POM\NavigationObjs.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PageObjectModels.SuperPage">
-    <Position X="7.25" Y="0.5" Width="2.5" />
+  <Class Name="PageObjModels.SuperPage">
+    <Position X="11.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAEAAQEAIEQAAAAIAEACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAEAAQEAAAQAAAAAAAAAAA=</HashCode>
       <FileName>POM\SuperPage.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="PageObjectModels.IPage">
-    <Position X="11.75" Y="0.5" Width="2.5" />
+  <Class Name="PageObjModels.POM.LogoutConfirmationPage">
+    <Position X="12.75" Y="10.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAEAAAAAIAQAAAAIAEAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>POM\LogoutConfirmationPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjModels.POM.LoginObjs">
+    <Position X="11.5" Y="6.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAFBAAAAQBQAAAAACAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>POM\LoginObjs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageObjModels.SpartaPages">
+    <Position X="6.75" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAIAEACAA=</HashCode>
+      <FileName>POM\SpartaPages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PageObjModels.IPage">
+    <Position X="15" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAQAAAAAAAAAAA=</HashCode>
       <FileName>POM\IPage.cs</FileName>
     </TypeIdentifier>
   </Interface>

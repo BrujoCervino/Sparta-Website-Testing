@@ -163,7 +163,6 @@ namespace SystemTests.Steps
         {
             Assert.That(_spartaWebsite.logoutConfirmationPage.GetSuccessMsg(), Does.Contain(message));
         }
-
         #endregion
     }
 }

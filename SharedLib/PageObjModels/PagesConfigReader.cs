@@ -1,4 +1,4 @@
-﻿namespace PageObjectModels
+﻿namespace PageObjModels
 {
     public class PagesConfigReader : ConfigReader
     {
