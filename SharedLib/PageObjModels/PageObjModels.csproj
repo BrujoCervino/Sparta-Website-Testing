@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserConfigReader.cs" />
+    <Compile Include="POM\LogoutConfirmationPage.cs" />
+    <Compile Include="POM\NavigationObjs.cs" />
     <Compile Include="Website\CodinGameWebsite.cs" />
     <Compile Include="ConfigModel.cs" />
     <Compile Include="ConfigReader.cs" />
@@ -87,6 +89,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="POM\PomClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
