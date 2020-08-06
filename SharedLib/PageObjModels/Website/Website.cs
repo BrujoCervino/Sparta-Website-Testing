@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Threading;
-using static PageObjectModels.Driver_Config.SeleniumDriverFactory;
+using static PageObjModels.Driver_Config.SeleniumDriverFactory;
 
 namespace PageObjModels
 {

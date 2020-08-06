@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace PageObjectModels
+namespace PageObjModels
 {
     public class ConfigReader
     {

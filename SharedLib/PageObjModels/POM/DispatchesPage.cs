@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace PageObjectModels.POM
+namespace PageObjModels.POM
 {
     public class DispatchesPage : TablePage
     {
