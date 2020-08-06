@@ -120,6 +120,7 @@
     <None Include="Features\SendTestOutAndCompleteIt.feature" />
     <None Include="Features\SendTestStartStatusInprogress.feature" />
     <None Include="packages.config" />
+    <None Include="SystemTests.cd" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

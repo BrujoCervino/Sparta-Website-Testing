@@ -141,6 +141,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="ResultsTests.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PageObjModels\PageObjModels.csproj">
