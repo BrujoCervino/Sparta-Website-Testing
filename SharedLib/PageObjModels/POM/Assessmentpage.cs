@@ -56,11 +56,11 @@ namespace PageObjModels.POM
         }
 
         //Wanted to capture the prompt message
-        //public string CaptureAlertMessage()
-        //{
-        //    var allertM = _seleniumDriver.SwitchTo().Alert();
-        //    return allertM.ToString();
-        //}
+        public string CaptureAlertMessage()
+        {
+            var allertM = _seleniumDriver.SwitchTo().Alert();
+            return allertM.ToString();
+        }
 
         public string BadRequest()
         {

@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\LoginViewDifferentPageLogout.feature" />
+    <None Include="Features\ResultsUpdateButton.feature" />
     <None Include="Features\SendTestAndCheckTheStausInResults.feature" />
     <None Include="Features\SendTestOutAndCompleteIt.feature" />
     <None Include="Features\SendTestStartStatusInprogress.feature" />

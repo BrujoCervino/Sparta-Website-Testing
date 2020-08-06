@@ -51,6 +51,11 @@ namespace SystemTests.Steps
             TestTools.Login(_spartaWebsite);
         }
 
+        [Given(@"I navigate to the results page")]
+        public void GivenINavigateToTheResultsPage()
+        {
+            _spartaWebsite.assessmentPage.ClickResults();
+        }
         #endregion
 
         #region Act
@@ -74,6 +79,13 @@ namespace SystemTests.Steps
             _spartaWebsite.resultsPage.ClickUpdatebutton();
             _spartaWebsite.SleepDriver(sleepTime);
             _spartaWebsite.resultsPage.Visit();
+        }
+
+        [When(@"The update button has been clicked")]
+        public void WhenTheUpdateButtonHasBeenClicked()
+        {
+            _spartaWebsite.resultsPage.ClickUpdatebutton();
+            _spartaWebsite.SleepDriver(sleepTime);
         }
 
         [When(@"I go to Dispatches page")]
@@ -118,8 +130,6 @@ namespace SystemTests.Steps
         {
             _spartaWebsite.pollsPage.Clicklogout();
         }
-
-        
         #endregion
 
         #region Assert
@@ -162,6 +172,12 @@ namespace SystemTests.Steps
         public void ThenShouldBeDisplayed(string message)
         {
             Assert.That(_spartaWebsite.logoutConfirmationPage.GetSuccessMsg(), Does.Contain(message));
+        }
+
+        [Then(@"the url should contain ""(.*)""")]
+        public void ThenTheUrlShouldContain(string urlSection)
+        {
+            Assert.That(_spartaWebsite.GetUrl(), Does.Contain(urlSection));
         }
         #endregion
     }
