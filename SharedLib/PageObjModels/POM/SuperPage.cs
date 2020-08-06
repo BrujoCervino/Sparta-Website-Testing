@@ -7,6 +7,7 @@ namespace PageObjectModels
         private IWebElement spartaLogo => _seleniumDriver.FindElement(By.Id("logoHeader"));
         private IWebElement pageTitle => _seleniumDriver.FindElement(By.ClassName("sparta_page_header"));
 
+
         protected IWebDriver _seleniumDriver;
         protected string _url;
 
