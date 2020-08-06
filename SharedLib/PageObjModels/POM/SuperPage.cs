@@ -4,8 +4,8 @@ namespace PageObjectModels
 {
     public class SuperPage : IPage
     {
-        private IWebElement spartaLogo => _seleniumDriver.FindElement(By.Id(".logoHeader"));
-        private IWebElement pageTitle => _seleniumDriver.FindElement(By.Id("page_title")) == null ? _seleniumDriver.FindElement(By.Id("login_title")) : _seleniumDriver.FindElement(By.Id("page_title"));
+        private IWebElement spartaLogo => _seleniumDriver.FindElement(By.Id("logoHeader"));
+        private IWebElement pageTitle => _seleniumDriver.FindElement(By.ClassName("sparta_page_header"));
 
 
         protected IWebDriver _seleniumDriver;

@@ -18,8 +18,11 @@ namespace EmailApi
         private string codingameUrl = "";
         private UserCredential credential;
 
+        private string searchFilterParameter = "no-reply@codingame.com";
 
-		public GmailAPIManager()
+
+
+        public GmailAPIManager()
 		{
             string root = AppDomain.CurrentDomain.BaseDirectory.Substring(0, AppDomain.CurrentDomain.BaseDirectory.IndexOf("SharedLib"));
 
@@ -74,11 +77,13 @@ namespace EmailApi
 
         internal string GetMostCurrentEmailID()
         {
-            List<Message> emailID = ListMessages(CreateService(), "me", "");
+            List<Message> emailID = ListMessages(CreateService(), "me", searchFilterParameter);
 
             var firstMessageResponse = emailID[0];
             return firstMessageResponse.Id;
         }
+
+        
 
         internal static List<Message> ListMessages(GmailService service, String userId, String query)
         {
