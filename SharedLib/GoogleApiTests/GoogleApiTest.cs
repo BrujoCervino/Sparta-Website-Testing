@@ -1,4 +1,5 @@
-﻿using EmailApi;
+﻿using System.Threading;
+using EmailApi;
 using NUnit.Framework;
 using PageObjModels;
 using SharedTestTools;
@@ -20,6 +21,7 @@ namespace GoogleApiTests
             Assert.That(codingGameWebsite.GetUrl(), Does.StartWith("https://www.codingame.com/evaluate/"));
 
             codingGameWebsite.Close();
-        }       
+        }
+
     }
 }
