@@ -22,7 +22,7 @@ We planned to have more sprints, but the product owner suggested only 2-- Sprint
 
 ### Getting Started
 
-*** 1 ~ *** Ensure you have a ```Config.json``` located within the ```/PageObjectModels``` folder
+***1*** ***~*** Ensure you have a ```Config.json``` located within the ```/PageObjectModels``` folder
 
 <img src="DocsImg/PageObjConfig.png" alt="PageObjConfig" width="512"/> <br/>
 
