@@ -104,8 +104,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given("\"Testy Mctestyface\" has been sent a \"csharp\" test to \"testproject.dummy456@gmail." +
-                        "com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("\"Glen Fiddich\" has been sent a \"csharp\" test to \"testproject.dummy456@gmail.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
  testRunner.When("the test has been completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -117,7 +116,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("The results have been updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then("\"Testy Mctestyface\" should bave a new entry in the C# results table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("\"Glen Fiddich\" should bave a new entry in the C# results table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 13
  testRunner.And("the C# results count has increased by one", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

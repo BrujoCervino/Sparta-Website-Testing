@@ -95,12 +95,6 @@ namespace AssessmentTests.Steps
         #endregion
 
         #region Assert
-        [Then(@"warning popup message should appear (.*)")]
-        public void ThenWarningPopupMessageShouldAppear(string warning)
-        {
-            Assert.That(_website.assessmentPage.CaptureAlertMessage(), Is.EqualTo(warning));
-        }
-
         [Then(@"i should be shown an error message (.*)")]
         public void ThenIShouldBeShownAnErrorMessage(string errormessage)
         {

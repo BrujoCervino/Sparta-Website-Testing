@@ -5,9 +5,9 @@
 
 @EndToEnd
 Scenario: Complete a sent out test
-	Given "Testy Mctestyface" has been sent a "csharp" test to "testproject.dummy456@gmail.com"	
+	Given "Glen Fiddich" has been sent a "csharp" test to "testproject.dummy456@gmail.com"	
 	When the test has been completed
 	And I go to the results page
 	And The results have been updated
-	Then "Testy Mctestyface" should bave a new entry in the C# results table
+	Then "Glen Fiddich" should bave a new entry in the C# results table
 	And the C# results count has increased by one
