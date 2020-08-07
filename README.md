@@ -56,7 +56,7 @@ If you skip this step, this compile-time error will appear at least once:
 
 ### How to run the tests
 
-***Tests are to be executed via NUNit***
+***Tests are to be executed via NUNit*** <br/>
 ***1*** ~ Using Visual Studio's *Test Explorer* window, select which test(s) you want to run and run them.<br/> 
 
 ### How the Google API is used
