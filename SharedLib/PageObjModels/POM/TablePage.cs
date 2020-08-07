@@ -45,5 +45,15 @@ namespace PageObjModels.POM
 
             return output;
         }
+
+        protected int TotalCountNumOfRows(IWebElement tableBody)
+        {
+            int rowCount = 0;
+            foreach (IWebElement row in tableBody.FindElements(By.TagName("tr")))
+            {
+                rowCount++;
+            }
+            return rowCount;
+        }
     }
 }

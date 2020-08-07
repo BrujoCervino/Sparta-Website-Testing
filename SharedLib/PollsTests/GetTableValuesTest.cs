@@ -53,21 +53,30 @@ namespace DispatchesTests
             Assert.That(pollsData[0][0], Is.EqualTo("August 3rd 2020, 10:50 am"));
         }
 
-        //[Test]
-        //public void GetTableValues_ReturnValues()
-        //{ // Fragile test, Will have to look further into it when further
-        //    _website.loginPage.Visit();
-        //    _website.loginPage.EnterUsername(LoginConfigReader.Username);
-        //    _website.loginPage.EnterPassword(LoginConfigReader.Password);
-        //    _website.loginPage.SubmitLoginInfo();
-        //    _website.pollsPage.Visit();
-        //    _website.pollsPage.GetTableContent();
-        //    // write a test that asserts if anyone's email from eng-58 exists in the polls page data
+        [Test]
+        public void CheckFormat_OfGivenRows()
+        {
+            //Correct format should be 12hr.
+            TestTools.Login(_website);
 
-        //    //List<string> emailList = new List<string>() { "shwetha21ashwath@gmail.com", "will.millington@btinternet.com", "Tperera@spartaglobal.com", "sunny.sahota989@gmail.com", "masimba36@outlook.com", "kmcevaddy@spartaglobal.com" };
-        //    Assert.That(_website.pollsPage.pollsList[0].PollTime, Is.EqualTo("August 2nd 2020, 8:00 am"));
-        //    //Assert.That(emailList, Does.Contain(_website.pollsPage.pollsList[1].Email));
-        //}
+            _website.pollsPage.Visit();
+
+            Assert.That(_website.pollsPage.CheckDateFormatInTable(numOfRows:20), Is.EqualTo(true));
+
+        }
+
+        [Test]
+        public void CheckStatus_OfGivenRows()
+        {
+            //Values will constantly change since status is dependant on users interaction with test
+            //Input number of rows to check against, to return status's of rows given
+            TestTools.Login(_website);
+
+            _website.pollsPage.Visit();
+
+            Assert.That(_website.pollsPage.CheckStatus(numOfRows:10), Is.EqualTo("completed: 0, in progress: 3, waiting: 7, aborted: 0, number of rows skipped: 0"));
+
+        }
 
         [TearDown]
         public void TearDown()
